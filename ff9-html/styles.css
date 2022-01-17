@@ -3,14 +3,29 @@
     padding: 0;
     box-sizing: border-box;
     background-color: rgb(197, 190, 190);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    /* height: 100vh; */
 }
 
 nav {
     display: flex;
     justify-content: space-evenly;
+    border: solid 2px #000;
+}
+
+nav div {
+    border-left: solid 2px #000;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    border: solid 2px #000;
+    width: 100%;
+    text-align: center;
+}
+
+nav div:first-child {
+    border-left: none;
 }
 
 .header-date {
@@ -46,5 +61,18 @@ nav {
 }
 
 h3 {
+    padding: 1rem;
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.cards img {
+    height: 100%;
+    width: 100%;
     padding: 1rem;
 }
