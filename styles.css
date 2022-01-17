@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(197, 190, 190);
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border: solid 2px #000;
+}
+
+.header-date {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.hero-img {
+    display: flex;
+    flex-direction: row;
+    height: 50%;
+}
+
+.hero-img img {
+    padding: 0.5rem;
+    width: 50%;
+    height: auto;
+}
+
+.duo {
+    display: flex;
+    width: 50%;
+    height: auto;
+    padding-left: 1rem;
+}
+
+.quad {
+    display: flex;
+    flex-flow: row wrap;
+    width: 50%;
+    padding-right: 1rem;
+}
+
+h3 {
+    padding: 1rem;
+}
