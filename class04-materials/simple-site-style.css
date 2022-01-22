@@ -1,0 +1,35 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background: #79caed;
+}
+
+main {
+    border: 3px solid #00e22f;
+    margin: 3rem;
+}
+
+.leon-logo {
+    width: 30%;
+    height: 40%;
+}
+
+.social-links {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    padding-bottom: 3rem;
+}
+
+.social-links li {
+    padding: 1rem;
+}
+
+.social-links li:first-child {
+    border-right: 2px solid #000;
+}
+
+.social-links li:last-child {
+    border-left: 2px solid #000;
+}
