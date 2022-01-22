@@ -8,18 +8,30 @@
 main {
     border: 3px solid #00e22f;
     margin: 3rem;
+    color: #fff;
+    padding: 2em;
+    font-family: 'Lato', Arial, serif;
 }
 
-.leon-logo {
-    width: 30%;
-    height: 40%;
+h1 {
+    text-align: center;
+    font-style: italic;
+    padding-bottom: 1rem;
+}
+
+a {
+    color: #00e22f;
+}
+
+.leon-logo img {
+    width: 25%;
+    height: 25%;
 }
 
 .social-links {
     display: flex;
     list-style-type: none;
     justify-content: center;
-    padding-bottom: 3rem;
 }
 
 .social-links li {
