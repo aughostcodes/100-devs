@@ -10,7 +10,7 @@ main {
     margin: 3rem;
     color: #fff;
     padding: 2em;
-    font-family: 'Lato', Arial, serif;
+    /* font-family: 'Lato', Arial, serif; */
 }
 
 h1 {
@@ -19,17 +19,37 @@ h1 {
     padding-bottom: 1rem;
 }
 
+ul {
+    list-style-type: none;
+}
+
 .header-ul {
     display: flex;
     justify-content: center;
+    font-weight: 900;
 }
 
-.header-nav ul:first-child {
-    border-right: 2px solid #000;
+.header-ul li {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    line-height: 1rem;
+}
+
+.header-ul li:first-child {
+    border-right: 1px solid #7d939c;
+}
+
+.header-ul li:last-child {
+    border-left: 1px solid #7f7f7f;
 }
 
 a {
-    color: #00e22f;
+    color: #00d99a;
+}
+
+h2 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 .leon-logo img {
@@ -39,18 +59,23 @@ a {
 
 .social-links {
     display: flex;
-    list-style-type: none;
     justify-content: center;
+    color: #00d999;
+    font-weight: 900;
 }
 
 .social-links li {
-    padding: 1rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    line-height: 1rem;
+    border-left: 1px solid #7f7f7f;
+    border-right: 1px solid #7d939c;
 }
 
 .social-links li:first-child {
-    border-right: 2px solid #000;
+    border-left: none;
 }
 
 .social-links li:last-child {
-    border-left: 2px solid #000;
+    border-right: none;
 }
