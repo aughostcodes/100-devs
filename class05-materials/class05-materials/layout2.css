@@ -1,0 +1,33 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header,
+footer {
+    border: 2px solid purple;
+    height: 100px;
+    clear: both;
+}
+
+section {
+    border: 2px solid purple;
+    height: 300px;
+    width: 100%;
+    float: left;
+}
+
+article {
+    border: 2px solid purple;
+    width: 35%;
+    height: 300px;
+    float: left;
+}
+
+article + article {
+    border: 2px solid yellow;
+    width: 65%;
+    height: 300px;
+    float: left;
+}
