@@ -13,12 +13,16 @@ footer {
 
 section {
     border: 2px solid lightgreen;
+    border-top: 1px;
     height: 500px;
     width: 20%;
     float: left;
 }
 
 section:nth-of-type(2) {
-    border: 2px solid orange;
     width: 40%;
+}
+
+footer {
+    border-top: 1px solid blue;
 }
