@@ -11,6 +11,10 @@ footer {
     clear: both;
 }
 
+header {
+    border-bottom: 1px solid purple;
+}
+
 section {
     border: 2px solid purple;
     height: 300px;
@@ -18,16 +22,31 @@ section {
     float: left;
 }
 
+section {
+    border-top: 1px solid purple;
+    border-bottom: 1px solid purple;
+}
+
 article {
     border: 2px solid purple;
+    border-top: 1px solid purple;
+    border-bottom: 1px solid purple;
     width: 35%;
     height: 300px;
     float: left;
 }
 
-article + article {
-    border: 2px solid yellow;
+article:first-of-type {
+    border-right: 1px solid purple;
+}
+
+article:last-of-type {
     width: 65%;
     height: 300px;
     float: left;
+    border-left: 1px solid purple;
+}
+
+footer {
+    border-top: 1px solid purple;
 }
