@@ -9,7 +9,7 @@ a {
 section {
     height: 200px;
     border: 10px solid blue;
-    background: orange;
+    background: lightsalmon;
 }
 
 /* Please make the aside have a height of 300px, a thin red border, and a teal background  */
@@ -25,5 +25,6 @@ aside {
 aside > p {
     color: white;
     font-size: 18px;
-    text-decoration: underline;
+    text-decoration: underline red;
+    /* border-bottom: 3px solid red; */
 }
