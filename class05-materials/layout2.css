@@ -17,14 +17,11 @@ header {
 
 section {
     border: 2px solid purple;
+    border-top: 1px solid purple;
+    border-bottom: 1px solid purple;
     height: 300px;
     width: 100%;
     float: left;
-}
-
-section {
-    border-top: 1px solid purple;
-    border-bottom: 1px solid purple;
 }
 
 article {
