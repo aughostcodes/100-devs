@@ -24,12 +24,27 @@ html {
 
 body {
   font-size: 1.5rem;
-  /* display: flex; */
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 2rem;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.top-float {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+header {
+  width: 20%;
 }
 
 header>nav {
   flex-wrap: column nowrap;
-  width: 100%;
+  width: 20%;
 }
 
 header>nav>ul {
@@ -57,14 +72,59 @@ header>nav>ul>li:nth-child(4) {
   color: green;
 }
 
+section {
+  display: flex;
+  width: 50%;
+  flex-flow: column nowrap;
+}
+
+section>img {
+  width: 75%;
+
+}
+
 aside {
-  clear: both;
+  width: 30%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+}
+
+aside>ul>li{
+  margin-bottom: 1rem;
+  height: calc(100% / 4);
+}
+
+aside h3{
+  font-size: 1.5rem;
+}
+
+.bottom-float>h4 {
+  padding: 2rem 0;
 }
 
 article {
   display: flex;
+  flex-flow: row nowrap;
+  border-top: 2rem;
 }
 
-img {
-  width: 50%;
+.bottom-title-info {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 33.3333%;
+  height: 100%;
+}
+
+.bottom-title-info>span+span {
+  justify-self: flex-end;
+}
+
+.bottom-float p {
+  color: red;
+  width: 33.3333%;
+}
+
+.bottom-float img {
+  width: 33.3333%;
 }
