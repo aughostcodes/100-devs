@@ -1,42 +1,23 @@
-/* Box Model Hack */
 * {
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
 /* Clear fix hack */
 .clearfix:after {
-     content: ".";
-     display: block;
-     clear: both;
-     visibility: hidden;
-     line-height: 0;
-     height: 0;
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
 }
 
 .clear {
-	clear: both;
+  clear: both;
 }
 
-/******************************************
-/* BASE STYLES
-/*******************************************/
-
-body {
-
+.author-span {
+  color: green;
 }
-
-
-/******************************************
-/* LAYOUT
-/*******************************************/
-header {
-
-}
-
-footer {
-
-}
-
-/******************************************
-/* ADDITIONAL STYLES
-/*******************************************/
