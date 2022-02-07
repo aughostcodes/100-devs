@@ -1,0 +1,37 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 10%;
+}
+
+header {
+    float: left;
+    width: 20%;
+}
+
+section {
+    float: left;
+    width: 40%;
+}
+
+aside {
+    float: left;
+    width: 20%;
+}
+
+article {
+    clear: both;
+}
+
+/* article>div {
+    float: left;
+} */
+
+article img {
+    width: 25%;
+    float: left;
+}
