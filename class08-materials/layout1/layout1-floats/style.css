@@ -4,6 +4,15 @@
     box-sizing: border-box;
 }
 
+.clearfix::after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
 img {
     width: 10%;
 }
@@ -18,18 +27,36 @@ section {
     width: 40%;
 }
 
+section img {
+    float: left;
+    width: 50%;
+}
+
 aside {
     float: left;
     width: 20%;
 }
 
-article {
-    clear: both;
+.bottom-title-info {
+    /* clear: both; */
+    float: left;
 }
 
-/* article>div {
+.bottom-title-info h4 {
+    color: red;
+}
+
+.bottom-title-info h3 {
     float: left;
-} */
+}
+
+.bottom-title-info span {
+    float: left;
+}
+
+.bottom-title-info p {
+    float: left;
+}
 
 article img {
     width: 25%;
