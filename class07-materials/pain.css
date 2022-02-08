@@ -4,3 +4,43 @@
     box-sizing: border-box;
 }
 
+header,
+footer {
+    height: 200px;
+    border: 2px solid green;
+    clear: both;
+}
+
+section {
+    border: 2px solid green;
+    width: calc(100vw / 3);
+    height: 200px;
+    float: left;
+}
+
+@media screen and (min-width: 1224px) {
+    section {
+        background: purple;
+    }
+}
+
+@media screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    section {
+        background: orange;
+    }
+}
+
+@media only screen and (max-width : 320px) {
+
+    header,
+    footer {
+        background: rgb(233, 192, 177);
+    }
+
+    section {
+        background: blue;
+        width: 100%;
+        height: 100px;
+        clear: both;
+    }
+}

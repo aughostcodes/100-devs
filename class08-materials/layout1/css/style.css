@@ -1,0 +1,141 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.5rem;
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 2rem;
+  border: 1px solid blue;
+}
+
+body * {
+  border: 1px solid purple;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.top-float {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+header {
+  width: 20%;
+}
+
+header>nav {
+  display: flex;
+  flex-wrap: column nowrap;
+  width: 100%;
+  height: 100%;
+}
+
+header>nav>ul>li {
+  height: calc(100 / 14);
+}
+
+header>nav>ul>li.TC-logo img {
+  width: 50%;
+}
+
+/* header>nav>ul {
+  display: flex;
+} */
+
+.nav-search>input {
+  width: 75%;
+}
+
+.nav-search img {
+  width: 15%;
+  vertical-align: middle;
+}
+
+.author-span {
+  color: green;
+}
+
+section {
+  display: flex;
+  width: 50%;
+  flex-flow: column nowrap;
+}
+
+section>img {
+  width: 75%;
+
+}
+
+aside {
+  width: 30%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-end;
+}
+
+aside>ul {
+  height: 100%;
+}
+
+aside>ul>li{
+  margin-bottom: 1rem;
+  /* height: 10rem; */
+}
+
+aside h3{
+  font-size: 1.5rem;
+}
+
+.bottom-float>h4 {
+  padding: 2rem 0;
+}
+
+article {
+  display: flex;
+  flex-flow: row nowrap;
+  border-top: 2rem;
+}
+
+.bottom-title-info {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 33.3333%;
+  height: 100%;
+}
+
+.bottom-title-info>span+span {
+  justify-self: flex-end;
+}
+
+.bottom-float p {
+  color: red;
+  width: 33.3333%;
+}
+
+.bottom-float img {
+  width: 33.3333%;
+}
