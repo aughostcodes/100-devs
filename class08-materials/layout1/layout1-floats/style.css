@@ -13,6 +13,15 @@
     height: 0;
 }
 
+html {
+    font-size: 62.5%;
+    height: 100vh;
+}
+
+body {
+    font-size: 1.8rem;
+}
+
 img {
     width: 10%;
 }
@@ -53,8 +62,7 @@ aside>ul>li {
 
 article {
     background-color: aquamarine;
-    width: 100%;
-    height: 100vh;
+    height: 20rem;
 }
 
 article h4 {
@@ -78,40 +86,27 @@ article h4 {
 
 .wrapper {
     width: 30%;
+    height: 18rem;
     margin: 0 auto;
+    background-color: #bebebe;
 }
 
 .wrapper p {
-    /* float: left;
-    clear: both; */
-    background-color: #bebebe;
-    height: 300px;
-    display: inline;
+    width: 100%;
+    /* float: left; */
+    /* clear: both; */
+    /* display: inline; */
 }
-
 
 .bottom-image img {
-    /* clear: both; */
-    float: right;
     width: 30%;
-    margin-top: -6rem;
+    background-color: lightgreen;
 }
 
-/* .bottom-image::after {
+.bottom-image::before {
+    content: "before?";
+}
+
+.bottom-image::after {
     content: "working?";
-} */
-
-/* article p {
-    clear: both;
-    margin: 0 auto;
-    background-color: aquamarine;
-    width: 70%;
-    display: inline;
-    clear: both;
-    float: left;
-} */
-
-/* article p>img {
-    float: right;
-    width: 30%;
-} */
+}
