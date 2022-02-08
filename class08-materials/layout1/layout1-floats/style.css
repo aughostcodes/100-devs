@@ -61,8 +61,9 @@ aside>ul>li {
 }
 
 article {
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
     height: 20rem;
+    clear: both;
 }
 
 article h4 {
@@ -93,20 +94,19 @@ article h4 {
 
 .wrapper p {
     width: 100%;
-    /* float: left; */
-    /* clear: both; */
-    /* display: inline; */
+}
+
+.bottom-image {
+    width: 100%;
+    /* background-color: blue; */
+    float: right;
+    margin-top: -18rem;
 }
 
 .bottom-image img {
+    
     width: 30%;
+    float: right;
+    clear: both;
     background-color: lightgreen;
-}
-
-.bottom-image::before {
-    content: "before?";
-}
-
-.bottom-image::after {
-    content: "working?";
 }
