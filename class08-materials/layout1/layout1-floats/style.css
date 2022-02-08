@@ -24,41 +24,72 @@ header {
 
 section {
     float: left;
-    width: 40%;
+    width: 60%;
+    height: 50vh;
+}
+
+.author-span {
+    clear: both;
+    float: left;
+    color: green;
 }
 
 section img {
+    clear: both;
     float: left;
     width: 50%;
 }
 
 aside {
-    float: left;
+    float: right;
     width: 20%;
 }
 
-.bottom-title-info {
-    /* clear: both; */
+aside>ul>li {
+    clear: both;
     float: left;
+    list-style-type: none;
 }
 
-.bottom-title-info h4 {
+article {
+    clear: both;
+    float: left;
+
+}
+
+article h4 {
+    clear: both;
     color: red;
+}
+
+.bottom-title-info {
+    width: 30%;
 }
 
 .bottom-title-info h3 {
     float: left;
+    clear: both;
 }
 
 .bottom-title-info span {
     float: left;
+    clear: both;
 }
 
-.bottom-title-info p {
-    float: left;
+article p {
+    clear: both;
+    margin: 0 auto;
+    background-color: aquamarine;
+    width: 30%;
+    display: inline;
 }
 
-article img {
-    width: 25%;
-    float: left;
+article p img {
+    vertical-align: middle;
+    width: 30%;
+}
+
+.bottom-image {
+    position: relative;
+    
 }
