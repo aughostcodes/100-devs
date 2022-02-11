@@ -143,11 +143,6 @@ article h4 {
     clear: both;
 }
 
-.wrapper {
-    /* height: 18rem; */
-    /* background-color: #bebebe; */
-}
-
 .wrapper::after {
     content: '';
     display: block;
