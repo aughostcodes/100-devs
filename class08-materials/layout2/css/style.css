@@ -50,7 +50,7 @@ main {
   float: right;
   clear: both;
   width: 35%;
-  margin-top: 8rem;
+  margin-top: 10rem;
   margin-right: 8rem;
   border: 2px solid blue;
 }
@@ -58,11 +58,13 @@ main {
 .main-info h1 {
   font-weight: 700;
   line-height: 1.2;
+  border-bottom: 0.25rem solid #52D1A7;
 }
 
 .main-info>h1::after {
-  content: ".";
-  border-bottom: 0.25rem solid #52D1A7;
+  content: "";
+  width: 50%;
+  background-color: red;
 }
 
 .main-info button {
@@ -72,8 +74,8 @@ main {
 
 .main-img {
   float: right;
-  width: 40%;
-  vertical-align: middle;
+  width: 50%;
+  margin-top: 4rem;
 }
 
 .main-img img {
