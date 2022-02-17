@@ -30,7 +30,7 @@ header nav ul {
 header nav ul li {
   float: left;
   padding-left: 5rem;
-  vertical-align: middle;
+  vertical-align: baseline;
 }
 
 .nav-icon {
@@ -58,9 +58,15 @@ main {
 }
 
 .main-info h1 {
-  font-weight: 700;
-  line-height: 1.2;
+  font-weight: 600;
+  font-family: 'Source Serif Pro', 'Noto Serif', serif;
+  /* line-height: 1.2; */
   border-bottom: 0.25rem solid #52D1A7;
+
+  line-height: 54px;
+  vertical-align: text-bottom;
+  letter-spacing: normal;
+  word-spacing: 0px;
 }
 
 .main-info>h1::after {
