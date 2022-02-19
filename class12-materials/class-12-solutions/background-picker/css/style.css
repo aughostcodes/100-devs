@@ -20,7 +20,7 @@ img{
 }
 ul{
   width: 100px;
-  height: calc(16rem + 6px);
+  height: 200px;
   border: 3px solid black;
   margin: 0 auto;
   list-style: none;
@@ -28,7 +28,7 @@ ul{
 }
 li{
   width: 94px;
-  height: 4rem;
+  height: 65px;
 }
 
 /******************************************
@@ -42,8 +42,4 @@ li{
 }
 #blue{
   background: rgba(0,254,255);
-}
-
-#gold {
-  background: rgba(151, 153, 2, 1);
 }
