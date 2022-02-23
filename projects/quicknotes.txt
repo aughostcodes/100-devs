@@ -1,0 +1,15 @@
+submit homework for class 11 when done, google forms https://forms.gle/7r1obfquRuih9BEu7
+
+youtube picker, not good calc, what day -
+add another color,
+add another button to calc,
+make sure it works with any casing and put in DOM
+
+THEN delete and keep redoing until example is not necessary
+
+
+
+2/22/22:
+https://forms.gle/G7LhHnyTA7zYq7UV6 - submit the JS homework here WHEN YOU HAVE PERSONALITY INFUSED
+
+do the temp converter js exercise
