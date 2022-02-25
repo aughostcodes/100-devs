@@ -9,3 +9,6 @@ function multiplyThreeNumbers(num1, num2, num3) {
 }
 
 //create a function that divides two numbers and returns the ???
+function divide(num1, num2) {
+    return (num1 / num2);
+}
