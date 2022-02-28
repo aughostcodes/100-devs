@@ -3,7 +3,7 @@ let tempInput = document.getElementById('temp-number').valueAsNumber;
 let convertButton = document.getElementById('submit-button');
 let startingScale = document.getElementById('starting-scale');
 let endingScale = document.getElementById('ending-scale');
-let startingScaleValue = startingScale.options[startingScale.selectedIndex].text;
+let startingScaleValue = startingScale.options[startingScale.selectedIndex].value;
 
 // Event listeners
 convertButton.addEventListener('click', convertTemp);
