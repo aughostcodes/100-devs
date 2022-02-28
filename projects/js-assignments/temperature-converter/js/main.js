@@ -37,7 +37,7 @@ function convertTemp() {
 // C to F:
 // F = 9/5 * C + 32
 function cToF(temp) {
-    result = ((9/5) * temp + 32).toFixed(2);
+    result = Math.round(((9/5) * temp + 32) * 100 / 100);
     display.textContent = result;
 }
 
