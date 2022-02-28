@@ -1,9 +1,11 @@
 // Variables
-let tempInput = document.getElementById('temp-number').valueAsNumber;
-let convertButton = document.getElementById('submit-button');
-let startingScale = document.getElementById('starting-scale');
-let endingScale = document.getElementById('ending-scale');
-let startingScaleValue = startingScale.options[startingScale.selectedIndex].value;
+const tempInput = document.getElementById('temp-input');
+let temp;
+const convertButton = document.getElementById('submit-button');
+const startingScale = document.getElementById('starting-scale');
+const endingScale = document.getElementById('ending-scale');
+let startingScaleValue;
+let endingScaleValue;
 
 // Event listeners
 convertButton.addEventListener('click', convertTemp);
@@ -11,10 +13,12 @@ convertButton.addEventListener('click', convertTemp);
 // Get temperature input from user
 
 function convertTemp() {
-    console.log('button works');
-    console.log(typeof(tempInput));
-    console.log(parseInt(tempInput));
+    temp = tempInput.valueAsNumber;
+    startingScaleValue = startingScale.options[startingScale.selectedIndex].value;
+    endingScaleValue = endingScale.options[endingScale.selectedIndex].value;
+    console.log(temp);
     console.log(startingScaleValue);
+    console.log(endingScaleValue);
 }
 
 // Determine starting scale and ending scale
