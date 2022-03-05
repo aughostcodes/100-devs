@@ -13,3 +13,20 @@ THEN delete and keep redoing until example is not necessary
 https://forms.gle/G7LhHnyTA7zYq7UV6 - submit the JS homework here WHEN YOU HAVE PERSONALITY INFUSED
 
 do the temp converter js exercise
+
+02/24/2022:
+bring it home practice
+redo all JS for all things
+
+Christina Chatham questions: 
+1. I have a PR ready to go. How does my code make it to production? Usually followup in the conversation with what do those tests that need to pass look like? Mostly unit? etc.
+2. How does the team make technical decision? both at the micro and the macro level
+3. What are some engineering initiatives currently prioritized in the backlog?
+4. Who does the scrum master type things?
+5. I try to gather this one from the other questions but if I don't get it: Is there a dedicated infastructure/dev exp
+6. For managers, what does the promotion process look like?
+7. For managers, do you have a leadership framework or philosophy you follow? What is it?
+5. I try to gather this one from the other questions but if I don't get it: Is there a dedicated infastructure/dev experience/tooling team?
+
+03/01/2022:
+submit js.info tasks to https://forms.gle/i4skrmpk1HiXXg6ZA
