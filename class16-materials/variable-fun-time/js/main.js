@@ -1,6 +1,6 @@
 //--- Easy
 //create a variable and assign it a number
-let sleep = 16;
+let sleep = 20;
 
 //minus 10 from that number
 sleep -= 10;
@@ -10,10 +10,9 @@ console.log(sleep);
 
 //--- Medium
 //create a variable that holds a value from the input
-let input = document.querySelector('#danceDanceRevolution');
 
 //add 25 to that number
-input = input.value + 25;
+// input = input.value + 25;
 
 //alert that number
 // alert(inputValue);
@@ -24,5 +23,6 @@ let h1Click = document.querySelector('h1');
 
 //add an event listener to that element that console logs the sum of the two previous variables
 h1Click.addEventListener('click', function() {
-    console.log(sleep + input);
+    let input = Number(document.querySelector('#danceDanceRevolution').value);
+    console.log(sleep + Number(input));
 });
