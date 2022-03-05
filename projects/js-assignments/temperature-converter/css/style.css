@@ -1,20 +1,23 @@
-/******************************************
-/* CSS
-/*******************************************/
-
-/* Box Model Hack */
 *{
   box-sizing: border-box;
+<<<<<<< HEAD
   margin: 0;
   padding: 0;
+=======
+  padding: 0;
+  margin: 0;
+>>>>>>> 686b1189b4157ad3cf5ab279a9ad2ca7bcb9f162
 }
 
-/******************************************
-/* LAYOUT
-/*******************************************/
+h1 {
+  text-align: center;
+}
 
-
-
-/******************************************
-/* ADDITIONAL STYLES
-/*******************************************/
+.display {
+  display: block;
+  text-align: center;
+  height: 6rem;
+  line-height: 6rem;
+  font-size: 6rem;
+  color: forestgreen;
+}

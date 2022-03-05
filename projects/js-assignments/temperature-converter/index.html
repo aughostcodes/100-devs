@@ -16,8 +16,8 @@
 <body>
 	<h1>Temperature Converter</h1>
 
-	<label for="temp-number">Enter numerical temperature to convert:</label>
-	<input type="number" id="temp-number" name="temp-number">
+	<label for="temp-input">Enter numerical temperature to convert:</label>
+	<input type="number" id="temp-input" name="temp-input">
 
 	<form action="#">
 		<label for="starting-scale">Starting Scale:</label>
@@ -31,13 +31,15 @@
 	<form action="#">
 		<label for="ending-scale">Ending Scale:</label>
 		<select name="temp-scales" id="ending-scale">
-			<option value="fahrenheit">Fahrenheit</option>
 			<option value="celsius">Celsius</option>
+			<option value="fahrenheit">Fahrenheit</option>
 			<option value="kelvin">Kelvin</option>
 		</select>
 	</form>
 
 	<button type="submit" id="submit-button">Convert</button>
+
+	<span class="display"></span>
 
 	<script type="text/javascript" src="js/main.js"></script>
 </body>
