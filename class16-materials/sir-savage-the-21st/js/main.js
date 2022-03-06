@@ -12,6 +12,8 @@ let displayDiv = document.querySelector('#savageSays');
 
 function display21() {
     for (let i = 0; i < 21; i++) {
+        // Discord user's solution:
+        // document.querySelector('body').innerHTML += '<p>' + 21 + '</p>';
         let createdText = document.createElement('p');
         createdText.textContent = '21';
         displayDiv.appendChild(createdText);
