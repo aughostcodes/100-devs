@@ -24,5 +24,5 @@ let h1Click = document.querySelector('h1');
 //add an event listener to that element that console logs the sum of the two previous variables
 h1Click.addEventListener('click', function() {
     let input = Number(document.querySelector('#danceDanceRevolution').value);
-    console.log(sleep + Number(input));
+    console.log(sleep + input);
 });
