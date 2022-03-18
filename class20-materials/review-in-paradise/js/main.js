@@ -22,7 +22,9 @@ function oneNum(num) {
 
 // *Conditionals*
 //Create a function that takes in a month. If it is a summer month alert "YAY". If another other month, alert "Booo"
-
+function checkifSummer(month) {
+    console.log('hold on a sec');
+}
 
 //*Loops*
 //Create a function that takes in a number. Console log every number from 1 to that number while skipping multiples of 5.
