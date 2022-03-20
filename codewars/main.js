@@ -22,6 +22,7 @@ Your team is writing a fancy new text editor and you've been tasked with impleme
 Write a function which takes a list of strings and returns each line prepended by the correct number.
 The numbering starts at 1. The format is n: string. Notice the colon and space in between. */
 // https://www.codewars.com/kata/54bf85e3d5b56c7a05000cf9/train/javascript //
+<<<<<<< HEAD
 const number = array =>
     array.map((val, idx) => `${idx + 1}: ${val}`);
 // SOLUTION
@@ -31,3 +32,13 @@ Complete the function that takes a non-negative integer n as input, and returns 
 function powersOfTwo(n) {
     return [];
 }
+=======
+function prependLines(arr) {
+    let result = [];
+    arr.forEach((element, index) => {
+        console.log(element);
+    });
+    console.log(result)
+}
+// IN PROGRESS
+>>>>>>> e886dabfcc39158ab66d652191744850ba2dbf40
