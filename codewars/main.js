@@ -45,7 +45,7 @@ Note: if there is nothing to sum, the sum is default to 0. */
 // https://www.codewars.com/kata/5715eaedb436cf5606000381/train/javascript
 function positiveSum(arr) {
     let positiveArr = [];
-    if (!arr) {
+    if (arr.length === 0) {
         return 0;
     } else {
         positiveArr = arr.filter(num => num >= 0); 
