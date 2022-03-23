@@ -14,3 +14,7 @@ stopWatch.end = function() {
     console.log(`Ending time at ${stopWatch.endTime}`);
 }
 
+let watch = {
+    currentTime: 420,
+    lastTime: 69,
+}
