@@ -9,13 +9,16 @@ console.log(reduced);
 //Return a new array of numbers that is every original number squared
 function arrSquared(arr) {
     let result = [];
-    result = arr.map(element => element**2);
+    result = arr.map(element => element ** 2);
     return result;
 }
 console.log(arrSquared([4, 9, 12]));
 
 //Create a function that takes string
 //Print the reverse of that string to the console
+function str(word) {
+
+}
 
 //Create a function that takes in a string
 //Alert if the string is a palindrome or not
