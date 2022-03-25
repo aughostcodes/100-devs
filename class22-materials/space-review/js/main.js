@@ -17,8 +17,17 @@ console.log(arrSquared([4, 9, 12]));
 //Create a function that takes string
 //Print the reverse of that string to the console
 function str(word) {
-
+    let reversed = word.split('').reverse().join('');
+    console.log(reversed);
 }
 
 //Create a function that takes in a string
 //Alert if the string is a palindrome or not
+function checkPalindrome(str) {
+    let reversed = str.split('').reverse().join('');
+    if (str === reversed) {
+        console.log('Palindrome detected!');
+    } else {
+        console.log('Not a match');
+    }
+}
