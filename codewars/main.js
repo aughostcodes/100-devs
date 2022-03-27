@@ -67,8 +67,30 @@ function solution(num) {
             // if (num[i] % 3 === 0 || num[i] % 5 === 0) {
             //     arr.push(num[i]);
             console.log(i);
+        }
+    }
+    // console.log(arr);
+}
+// IN PROGRESS
+
+/* 7 kyu - String ends with?
+Complete the solution so that it returns true if the first argument(string) passed in ends with the 2nd argument (also a string). */
+// https://www.codewars.com/kata/51f2d1cafc9c0f745c00037d/train/javascript
+function strEndsWith(str, ending) {
+    str = str.split('').reverse();
+    ending = ending.split('').reverse();
+    console.log(ending.length);
+    for (let i = 0; i <= ending.length; i++) {
+        console.log(ending[i]);
+        console.log(str[i]);
+        for (let j = 0; j <= str.length; j++) {
+            if (str[i] !== ending[i]) {
+                return false;
+            } else {
+                return true;
             }
         }
-        // console.log(arr);
     }
-// IN PROGRESS
+}
+
+// IN PROGRESS, feels frustratingly close albeit very convoluted currently

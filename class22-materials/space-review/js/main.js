@@ -25,9 +25,5 @@ function str(word) {
 //Alert if the string is a palindrome or not
 function checkPalindrome(str) {
     let reversed = str.split('').reverse().join('');
-    if (str === reversed) {
-        console.log('Palindrome detected!');
-    } else {
-        console.log('Not a match');
-    }
+    return (str === reversed) ? console.log('Palindrome detected!') : console.log('Not a match');
 }
