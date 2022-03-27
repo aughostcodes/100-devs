@@ -77,20 +77,19 @@ function solution(num) {
 Complete the solution so that it returns true if the first argument(string) passed in ends with the 2nd argument (also a string). */
 // https://www.codewars.com/kata/51f2d1cafc9c0f745c00037d/train/javascript
 function strEndsWith(str, ending) {
-    str = str.split('').reverse();
-    ending = ending.split('').reverse();
-    console.log(ending.length);
-    for (let i = 0; i <= ending.length; i++) {
-        console.log(ending[i]);
-        console.log(str[i]);
-        for (let j = 0; j <= str.length; j++) {
-            if (str[i] !== ending[i]) {
-                return false;
-            } else {
-                return true;
-            }
-        }
-    }
+    // str = str.split('').reverse();
+    // ending = ending.split('').reverse();
+    // for (let i = 0; i <= str.length; i++) {
+    //     console.log(ending[i]);
+    //     console.log(str[i]);
+    //     for (let j = 0; j <= ending.length; j++) {
+    //         if (str[i] !== ending[i] || !ending[i]) {
+    //             return false;
+    //         } else {
+    //             return true;
+    //         }
+    //     }
+    // }
+    return str.endsWith(ending);
 }
-
-// IN PROGRESS, feels frustratingly close albeit very convoluted currently
+// SOLUTION; Wow, wtf
