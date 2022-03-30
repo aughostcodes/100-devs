@@ -1,6 +1,7 @@
 // These exercises from https://the-winter.github.io/codingjs/
 
 // Warmup-1
+
 /* sleepIn - The parameter weekday is true if it is a weekday, and the parameter vacation is true if we are on vacation. We sleep in if it is not a weekday or we're on vacation. Return true if we sleep in. */
 function sleepIn(weekday, vacation) {
     if (weekday && vacation) {
@@ -44,4 +45,49 @@ function parrotTrouble(talking, hour) {
 // HAD A WEIRD BREAKTHROUGH RIGHT HERE. FOCUS ON LEARNING SIMPLE RETURN STATEMENTS USING BOOLEANS INSTEAD OF LARGE NESTED IF/ELSE LOOPS
 function makes10(a, b) {
     return (a === 10 || b === 10) || (a + b === 10);
+}
+
+/* nearHundred - Given an int n, return true if it is within 10 of 100 or 200. Note: Math.abs(num) computes the absolute value of a number. */
+function nearHundred(n) {
+    return ((Math.abs(n) >= 90 && Math.abs(n) <= 110) || (Math.abs(n) >= 190 && Math.abs(n) <= 210)) ? true : false;
+}
+
+/* posNeg - Given 2 int values, return true if one is negative and one is positive. Except if the parameter "negative" is true, then return true only if both are negative. */
+function posNeg(a, b, negative) {
+    if (negative === true && (a < 0 && b < 0)) {
+        return true;
+    } else if (negative === false && (a < 0 && b > 0 || a > 0 && b < 0)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+// Refactor this?
+
+/* notString - Given a string, return a new string where "not " has been added to the front. However, if the string already begins with "not", return the string unchanged. */
+function notString(str) {
+    let notStr = 'not ';
+    return str.startsWith(notStr) ? str : notStr.concat(str);
+}
+
+/* missingChar - Given a non-empty string and an int n, return a new string where the char at index n has been removed. The value of n will be a valid index of a char in the original string (i.e. n will be in the range 0..str.length()-1 inclusive). */
+function missingChar(str, n) {
+    return str = str.replace(str.charAt(n), '');
+}
+
+/* frontBack - Given a string, return a new string where the first and last chars have been exchanged. */
+function frontBack(str) {
+    let newStr = [...str];
+    let strFirst = newStr[0];
+    let strLast = newStr[newStr.length - 1];
+    newStr[0] = strLast;
+    newStr[newStr.length - 1] = strFirst;   
+    return newStr.join('');
+}
+// Can refactor the variables, but I like the readability for now
+
+/* front3 - Given a string, we'll say that the front is the first 3 chars of the string. If the string length is less than 3, the front is whatever is there. Return a new string which is 3 copies of the front. */
+function front3(str) {
+    str = str.split('');
+    let frontString = '';
 }
