@@ -74,3 +74,19 @@ function notString(str) {
 function missingChar(str, n) {
     return str = str.replace(str.charAt(n), '');
 }
+
+/* frontBack - Given a string, return a new string where the first and last chars have been exchanged. */
+function frontBack(str) {
+    let newStr = [...str];
+    let strFirst = newStr[0];
+    let strLast = newStr[newStr.length - 1];
+    newStr[0] = strLast;
+    newStr[newStr.length - 1] = strFirst;   
+    return newStr.join('');
+}
+// Can refactor the variables, but I like the readability for now
+
+/* front3 - Given a string, we'll say that the front is the first 3 chars of the string. If the string length is less than 3, the front is whatever is there. Return a new string which is 3 copies of the front. */
+function front3(str) {
+    console.log(str.startsWith('', 3));
+}
