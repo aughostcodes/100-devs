@@ -196,8 +196,9 @@ function delDel(str) {
 
 /* mixStart - Return true if the given string begins with 'mix', except the 'm' can be anything, so 'pix', '9ix' .. all count. */
 function mixStart(str) {
-    const re = /\wix/;
+    const re = /[a-zA-Z/i;
     if (str.startsWith(re)) {
         return true;
     }
 }
+// Still don't get regex. Can't use a regex with startsWith(), apparently. Maybe use match()? 
