@@ -81,7 +81,7 @@ function frontBack(str) {
     let strFirst = newStr[0];
     let strLast = newStr[newStr.length - 1];
     newStr[0] = strLast;
-    newStr[newStr.length - 1] = strFirst;   
+    newStr[newStr.length - 1] = strFirst;
     return newStr.join('');
 }
 // Can refactor the variables, but I like the readability for now
@@ -90,4 +90,40 @@ function frontBack(str) {
 function front3(str) {
     str = str.split('');
     let frontString = '';
+    let result = '';
+
+    if (str.length >= 3) {
+        for (let i = 0; i < 3; i++) {
+            frontString += str[i];
+        }
+    } else if (str.length < 3) {
+        for (let i = 0; i < str.length; i++) {
+            frontString += str[i];
+        }
+    }
+
+    for (let i = 0; i < 3; i++) {
+        result += frontString;
+    }
+    return result;
 }
+// Definitely an easier way to do it, but it passes all tests
+
+/* backAround - Given a string, take the last char and return a new string with the last char added at the front and back, so 'cat' yields 'tcatt' The original string will be length 1 or more. */
+function backAround(str) {
+    let lastChar = str.charAt(str.length - 1);
+    str = `${lastChar}${str}${lastChar}`;
+    return str;
+}
+
+/* or35 - Return true if the given non-negative number is a multiple of 3 or a multiple of 5. (Hint: Use the % 'mod' operator). */
+// function or35(n) {
+    // if (n % 3 === 0 || n % 5 === 0) {
+    //     return true;
+    // } else {
+    //     return false;
+    // }
+// }
+const or35 = n => (n % 3 === 0 || n % 5 === 0) ? true : false;
+// Getting more comfortable with ternaries and arrow functions
+
