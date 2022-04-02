@@ -201,7 +201,8 @@ function mixStart(str) {
         return true;
     }
 }
-/* Still don't get regex. Can't use a regex with startsWith(), apparently. Maybe use match()? THIS IS NOT COMPLETE */
+// Still don't get regex. Can't use a regex with startsWith(), apparently. Maybe use match()? 
+// THIS IS NOT COMPLETE
 
 /* startOz - Given a string, return a string made of the first 2 chars (if present), however include first char only if it is 'o' and include the second only if it is 'z', so 'ozymandias' yields 'oz'. */
 function startOz(str) {
