@@ -1,4 +1,52 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: 'IBM Plex Mono';
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card {
+    border: purple 1px solid;
+    padding: 1em;
+    margin: 1em 2em;
+    display: flex;
+}
+
+.card-img {
+    width: 50%;
+}
+/* Maybe a pseudo-element to slide up more information over the image, i.e. live site vs code link */
+
+.card-text {
+    width: 50%;
+}
+
+.project-thoughts {
+    color: blue;
+}
+
+
+
+
+
+
+
+
+footer {
+    border: green 1px solid;
+    text-align: center;
+}
+
+footer span {
+    display: block;
+    margin: 1rem;
+}
+
+footer .social-icon {
+    font-size: 2rem;
+    margin: 0 1rem;
 }
