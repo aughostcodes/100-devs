@@ -1,12 +1,50 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'IBM Plex Mono';
+    font-family: 'IBM Plex Mono', 'Helvetica', sans-serif;
 }
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-container header {
+    align-self: flex-end;
+    margin-right: 2em;
+}
+
+.intro-container {
+    margin: 2em 2em 0 2em;
+}
+
+.intro-text {
+    margin: 1em;
+    width: 50%;
+}
+
+.intro-text p:last-child {
+    color: red;
+    margin: 1em 0;
+}
+
+
+
+
 
 .projects {
     display: flex;
     flex-direction: column;
+}
+
+.projects h3 {
+    margin: 1em;
+    text-align: center;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
 }
 
 .project-card {
@@ -14,6 +52,8 @@
     padding: 1em;
     margin: 1em 2em;
     display: flex;
+    align-items: center;
+    flex-grow: 1;
 }
 
 .card-img {
@@ -23,6 +63,19 @@
 
 .card-text {
     width: 50%;
+    font-size: 1em;
+}
+
+.project-desc {
+    color: orange;
+}
+
+.project-problem {
+    color: teal;
+}
+
+.project-solved {
+    color: red;
 }
 
 .project-thoughts {
@@ -30,7 +83,9 @@
 }
 
 
-
+.about-me {
+    
+}
 
 
 
@@ -46,7 +101,24 @@ footer span {
     margin: 1rem;
 }
 
-footer .social-icon {
+.icon-container {
+    margin-bottom: 1rem;
+}
+
+.social-icon {
     font-size: 2rem;
     margin: 0 1rem;
+}
+
+.social-icon:hover {
+    color: green;
+    transform: scale(125%);
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 900px) {
+    .card-container {
+        flex-direction: column;
+    }
 }
