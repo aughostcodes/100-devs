@@ -1,7 +1,17 @@
+/* colors:
+#cee6fa; light blue
+#191a18; black
+#f6d72b; yellow
+#4e5f5c; green
+https://huemint.com/website-2/#palette=cee6fa-191a18-f6d72b-4e5f5c
+*/
+
 * {
     margin: 0;
     padding: 0;
     font-family: 'IBM Plex Mono', 'Helvetica', sans-serif;
+    background-color: #191a18;
+    color: #cee6fa;
 }
 
 .main-container {
@@ -16,6 +26,10 @@
 
 .intro-container {
     margin: 2em 2em 0 2em;
+}
+
+.my-name {
+    color: #4e5f5c;
 }
 
 .intro-text {
@@ -48,7 +62,7 @@
 }
 
 .project-card {
-    border: purple 1px solid;
+    border: #f6d72b 3px solid;
     padding: 1em;
     margin: 1em 2em;
     display: flex;
@@ -83,9 +97,9 @@
 }
 
 
-.about-me {
+/* .about-me {
     
-}
+} */
 
 
 
