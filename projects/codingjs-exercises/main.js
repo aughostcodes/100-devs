@@ -255,3 +255,28 @@ function in3050(a, b) {
     return false;
 }
 // Got the parens corrent first try
+
+/* max1020 - Given 2 positive int values, return the larger value that is in the range 10..20 inclusive, or return 0 if neither is in that range. */
+function max1020(a, b) {
+    if ((a >= 10 && a <= 20) && (b < 10 || b > 20)) {
+        return a;
+    } else if ((b >= 10 && b <= 20) && (a < 10 || a > 20)) {
+        return b;
+    } else if ((a >= 10 && a <= 20) || (b >= 10 && b <= 20)) {
+        if (a > b) {
+            return a;
+        } else {
+            return b;
+        }
+    } else if ((a >= 10 && a <= 20) || (b >= 10 && b <= 20)) {
+        return 0;
+    } else {
+        return 0;
+    }
+}
+// The final else return 0 was, again, the issue I couldn't solve at first. Passing all tests now, but I am not happy with this code
+
+/* stringE - Return true if the given string contains between 1 and 3 'e' chars. */
+function stringE(str) {
+    
+}
