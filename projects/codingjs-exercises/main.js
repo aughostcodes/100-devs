@@ -1,5 +1,9 @@
 // These exercises from https://the-winter.github.io/codingjs/
 
+/* The following were skipped and need to be revisited:
+Warmup-1: mixStart
+*/
+
 // WARMUP-1
 
 /* sleepIn - The parameter weekday is true if it is a weekday, and the parameter vacation is true if we are on vacation. We sleep in if it is not a weekday or we're on vacation. Return true if we sleep in. */
@@ -159,19 +163,20 @@ function in1020(a, b) {
 /* hasTeen - We'll say that a number is 'teen' if it is in the range 13..19 inclusive. Given 3 int values, return true if 1 or more of them are teen. */
 function hasTeen(a, b, c) {
     let arr = [a, b, c];
-//     arr.forEach(num => {
-//         if (num >= 13 && num <= 19) {
-//             console.log(num);
-//             console.log('found one');
-//             return true;
-//         } else {
-//             return false;
-//         }
-//     });
+    //     arr.forEach(num => {
+    //         if (num >= 13 && num <= 19) {
+    //             console.log(num);
+    //             console.log('found one');
+    //             return true;
+    //         } else {
+    //             return false;
+    //         }
+    //     });
     let result = arr.filter(num => (num <= 19 && num >= 13));
     if (result.length) {
         return true;
-    } return false;
+    }
+    return false;
 }
 // Still working on realizing which method is most effective for the issue at hand. Tried a for-loop here, then forEach, then filter
 
@@ -179,7 +184,8 @@ function hasTeen(a, b, c) {
 function loneTeen(a, b) {
     if (((a >= 13 && a <= 19) && (b < 13 || b > 19)) || ((b >= 13 && b <= 19) && (a < 13 || a > 19))) {
         return true;
-    } return false;
+    }
+    return false;
 }
 // Parens were causing test fails here
 
@@ -190,7 +196,8 @@ function delDel(str) {
         console.log('del detected');
         newStr = `${str.slice(0, 1)}${str.slice(4, str.length)}`;
         return newStr;
-    } return str;
+    }
+    return str;
 }
 // Slice is (inclusive, non-inclusive). Tried slice(4, str.length - 1) first, which cuts off the last character
 
@@ -208,7 +215,7 @@ function mixStart(str) {
 function startOz(str) {
     let newStr = '';
     str = str.toLowerCase().split('');
-    console.log('str: ', str);
+    // console.log('str: ', str);
     for (let i = 0; i < 2; i++) {
         if (str[0] === 'o' && str[1] === 'z') {
             return newStr = 'oz';
@@ -221,11 +228,30 @@ function startOz(str) {
     }
 }
 // Yeah, nevermind for now. Too sleepy
+// Update to several days later: literally first try after really applying myself. Wordy, but working
 
 /* intMax - Given three int values (a, b, c), return the largest */
 const intMax = (a, b, c) => Math.max(a, b, c);
 
 /* close10 - Given 2 int values, return whichever value is nearest to the value 10, or return 0 in the event of a tie. Note that Math.abs(n) returns the absolute value of a number. */
 function close10(a, b) {
-
+    if (a === b) {
+        return 0;
+    } else if (Math.abs(a - 10) < (Math.abs(b - 10))) {
+        return a;
+    } else if (Math.abs(b - 10) < (Math.abs(a - 10))) {
+        return b;
+    } else {
+        return 0;
+    }
 }
+// Looked up Math.abs. Got hung up on needing the final else return 0, but passed all tests after that
+
+/* in3050 - Given 2 int values, return true if they are both in the range 30..40 inclusive, or they are both in the range 40..50 inclusive. */
+function in3050(a, b) {
+    if (((a >= 30 && a <= 40) && (b >= 30 && b <= 40)) || ((a >= 40 && a <= 50) && (b >= 40 && b <= 50))) {
+        return true;
+    }
+    return false;
+}
+// Got the parens corrent first try
