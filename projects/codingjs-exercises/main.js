@@ -206,6 +206,26 @@ function mixStart(str) {
 
 /* startOz - Given a string, return a string made of the first 2 chars (if present), however include first char only if it is 'o' and include the second only if it is 'z', so 'ozymandias' yields 'oz'. */
 function startOz(str) {
-
+    let newStr = '';
+    str = str.toLowerCase().split('');
+    console.log('str: ', str);
+    for (let i = 0; i < 2; i++) {
+        if (str[0] === 'o' && str[1] === 'z') {
+            return newStr = 'oz';
+        } else if (str[0] === 'o' && str[1] !== 'z') {
+            newStr = 'o';
+        } else if (str[0] !== 'o' && str[1] === 'z') {
+            newStr = 'z';
+        }
+        return newStr;
+    }
 }
 // Yeah, nevermind for now. Too sleepy
+
+/* intMax - Given three int values (a, b, c), return the largest */
+const intMax = (a, b, c) => Math.max(a, b, c);
+
+/* close10 - Given 2 int values, return whichever value is nearest to the value 10, or return 0 in the event of a tie. Note that Math.abs(n) returns the absolute value of a number. */
+function close10(a, b) {
+
+}
