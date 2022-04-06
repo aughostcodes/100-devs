@@ -255,7 +255,7 @@ function in3050(a, b) {
     }
     return false;
 }
-// Got the parens corrent first try
+// Got the parens correct first try
 
 /* max1020 - Given 2 positive int values, return the larger value that is in the range 10..20 inclusive, or return 0 if neither is in that range. */
 function max1020(a, b) {
@@ -275,7 +275,7 @@ function max1020(a, b) {
         return 0;
     }
 }
-// The final else return 0 was, again, the issue I couldn't solve at first. Passing all tests now, but I am not happy with this code
+// The final else return 0 was, again, the issue I couldn't solve at first. Passing all tests now, still messy
 
 /* stringE - Return true if the given string contains between 1 and 3 'e' chars. */
 function stringE(str) {
@@ -306,3 +306,14 @@ function endUp(str) {
     return newStr;
 }
 // Tired, done for tonight
+
+/* everyNth - Given a non-empty string and an int N, return the string made starting with char 0, and then every Nth char of the string. So if N is 3, use char 0, 3, 6, ... and so on. N is 1 or more. */
+function everyNth(str, n) {
+    let newStr = '';
+    str = str.split('');
+    for (let i = 0; i < str.length; i += n) {
+        newStr += str[i];
+    }
+    return newStr;
+}
+// Yeah, still too tired
