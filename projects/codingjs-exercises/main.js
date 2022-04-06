@@ -278,5 +278,15 @@ function max1020(a, b) {
 
 /* stringE - Return true if the given string contains between 1 and 3 'e' chars. */
 function stringE(str) {
+    let eCount = str.split('').filter(x => x === 'e').length;
+    if (eCount >= 1 && eCount <= 3) {
+        return true;
+    }
+    return false;
+}
+// SO'd "how many times a character occurs in a string" to solve this
+
+/* lastDigit - Given two non-negative int values, return true if they have the same last digit, such as with 27 and 57. Note that the % 'mod' operator computes remainders, so 17 % 10 is 7. */
+function lastDigit(a, b, c) {
     
 }
