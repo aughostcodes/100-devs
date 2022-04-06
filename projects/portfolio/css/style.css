@@ -4,14 +4,20 @@
 #f6d72b; yellow
 #4e5f5c; green
 https://huemint.com/website-2/#palette=cee6fa-191a18-f6d72b-4e5f5c
+
+Dark blue - #252d39;
+Gold - #9b6a48;
+Peach - #c78e68;
+Lilac - #d4bbad;
+https://huemint.com/back-gradient-3/#palette=252d39-9b6a48-c78e68-d4bbad
 */
 
 * {
     margin: 0;
     padding: 0;
     font-family: 'IBM Plex Mono', 'Helvetica', sans-serif;
-    background-color: #191a18;
-    color: #cee6fa;
+    background-color: #252d39;
+    color: #d4bbad;
 }
 
 .main-container {
@@ -54,6 +60,7 @@ https://huemint.com/website-2/#palette=cee6fa-191a18-f6d72b-4e5f5c
 .projects h3 {
     margin: 1em;
     text-align: center;
+    color: #9b6a48;
 }
 
 .card-container {
@@ -62,7 +69,7 @@ https://huemint.com/website-2/#palette=cee6fa-191a18-f6d72b-4e5f5c
 }
 
 .project-card {
-    border: #f6d72b 3px solid;
+    background: #c78e68;
     padding: 1em;
     margin: 1em 2em;
     display: flex;
@@ -72,16 +79,19 @@ https://huemint.com/website-2/#palette=cee6fa-191a18-f6d72b-4e5f5c
 
 .card-img {
     width: 50%;
+    background: #c78e68;
 }
 /* Maybe a pseudo-element to slide up more information over the image, i.e. live site vs code link */
 
 .card-text {
     width: 50%;
     font-size: 1em;
+    background: #c78e68;
 }
 
 .project-desc {
     color: orange;
+    background: #c78e68;
 }
 
 .project-problem {
