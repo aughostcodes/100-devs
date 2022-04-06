@@ -2,6 +2,7 @@
 
 /* The following were skipped and need to be revisited:
 Warmup-1: mixStart
+Warmup-1: lastDigit
 */
 
 // WARMUP-1
@@ -287,6 +288,21 @@ function stringE(str) {
 // SO'd "how many times a character occurs in a string" to solve this
 
 /* lastDigit - Given two non-negative int values, return true if they have the same last digit, such as with 27 and 57. Note that the % 'mod' operator computes remainders, so 17 % 10 is 7. */
-function lastDigit(a, b, c) {
-    
+// function lastDigit(a, b, c) {
+
+// }
+// In progress, I don't want to do math stuff right now
+
+/* endUp - Given a string, return a new string where the last 3 chars are now in upper case. If the string has less than 3 chars, uppercase whatever is there. Note that str.toUpperCase() returns the uppercase version of a string. */
+function endUp(str) {
+    let newStr = '';
+    if (str.length < 3) {
+        return newStr = str.toUpperCase();
+    } else {
+        for (let i = str.length - 1; i < 3; i--) {
+            newStr += str[i].toUpperCase();
+        }
+    }
+    return newStr;
 }
+// Tired, done for tonight
