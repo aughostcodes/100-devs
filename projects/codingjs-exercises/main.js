@@ -2,7 +2,6 @@
 
 /* The following were skipped and need to be revisited:
 Warmup-1: mixStart
-Warmup-1: lastDigit
 */
 
 // WARMUP-1
@@ -288,32 +287,27 @@ function stringE(str) {
 // SO'd "how many times a character occurs in a string" to solve this
 
 /* lastDigit - Given two non-negative int values, return true if they have the same last digit, such as with 27 and 57. Note that the % 'mod' operator computes remainders, so 17 % 10 is 7. */
-// function lastDigit(a, b, c) {
-
-// }
-// In progress, I don't want to do math stuff right now
+function lastDigit(a, b) {
+    if (a % 10 === b % 10) {
+        return true;
+    }
+    return false;
+}
 
 /* endUp - Given a string, return a new string where the last 3 chars are now in upper case. If the string has less than 3 chars, uppercase whatever is there. Note that str.toUpperCase() returns the uppercase version of a string. */
 function endUp(str) {
-    let newStr = '';
-    if (str.length < 3) {
-        return newStr = str.toUpperCase();
+    if (str.length <= 3) {
+        return str.toUpperCase();
     } else {
-        for (let i = str.length - 1; i < 3; i--) {
-            newStr += str[i].toUpperCase();
-        }
+        let newStr = str.substring(0, str.length - 3);
+        let capString = str.substring(str.length - 3).toUpperCase();
+        return `${newStr}${capString}`;
     }
-    return newStr;
 }
-// Tired, done for tonight
+// This one took a minute, because I thought substring was deprecated? Need to look this up more thoroughly, though this solution passes all tests
+// Update: substr() is deprecated; also could have/should have used slice() here
 
 /* everyNth - Given a non-empty string and an int N, return the string made starting with char 0, and then every Nth char of the string. So if N is 3, use char 0, 3, 6, ... and so on. N is 1 or more. */
 function everyNth(str, n) {
-    let newStr = '';
-    str = str.split('');
-    for (let i = 0; i < str.length; i += n) {
-        newStr += str[i];
-    }
-    return newStr;
+
 }
-// Yeah, still too tired
