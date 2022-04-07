@@ -5,6 +5,7 @@ Warmup-1: mixStart
 Warmup-1: everyNth
 */
 
+
 // WARMUP-1
 
 /* sleepIn - The parameter weekday is true if it is a weekday, and the parameter vacation is true if we are on vacation. We sleep in if it is not a weekday or we're on vacation. Return true if we sleep in. */
@@ -312,7 +313,7 @@ function endUp(str) {
 function everyNth(str, n) {
     let newStr = '';
     str = str.split('');
-    for (let i = 0; i < str.length; i ) {
+    for (let i = 0; i < str.length; i) {
         console.log(str[i]);
     }
 }
@@ -333,5 +334,13 @@ function stringTimes(str, n) {
 
 /* frontTimes - Given a string and a non-negative int n, we'll say that the front of the string is the first 3 chars, or whatever is there if the string is less than length 3. Return n copies of the front. */
 function frontTimes(str, n) {
-
+    let newStr = '';
+    let frontStr = '';
+    if (str.length <= 3) {
+        return newStr = str.slice(0, 4);
+    } else {
+        frontStr = str.substring(0, str.length - 3);
+        return `${newStr}${frontStr}`;
+    }
 }
+// I don't know. I'm honestly just guessing at this point, and that's dumb
