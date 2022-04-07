@@ -2,6 +2,7 @@
 
 /* The following were skipped and need to be revisited:
 Warmup-1: mixStart
+Warmup-1: everyNth
 */
 
 // WARMUP-1
@@ -309,5 +310,17 @@ function endUp(str) {
 
 /* everyNth - Given a non-empty string and an int N, return the string made starting with char 0, and then every Nth char of the string. So if N is 3, use char 0, 3, 6, ... and so on. N is 1 or more. */
 function everyNth(str, n) {
+    let newStr = '';
+    str = str.split('');
+    for (let i = 0; i < str.length; i ) {
+        console.log(str[i]);
+    }
+}
+// Got bored. Will come back here, keep moving
 
+// WARMUP-2
+
+/* stringTimes - Given a string and a non-negative int n, return a larger string that is n copies of the original string. */
+function stringTimes(str, n) {
+    
 }
