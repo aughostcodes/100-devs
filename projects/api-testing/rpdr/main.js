@@ -9,20 +9,23 @@ const dragName = document.querySelector('.drag-name');
 const famousQuote = document.querySelector('.quote');
 const seasons = document.querySelector('.seasons');
 const queenPic = document.querySelector('.queen-pic');
+const seasonsHeader = document.querySelector('.seasons-header');
 
-fetch(`http://www.nokeynoshade.party/api/queens/30`)
+fetch(`http://www.nokeynoshade.party/api/queens/19`)
     .then(res => res.json())
     .then(data => {
         dragName.textContent = data.name;
         famousQuote.textContent = data.quote;
         if (data.seasons.length > 1) {
+            seasonsHeader.textContent = 'Appears in seasons:';
             for (let i = 0; i < data.seasons.length; i++) {
                 console.log(`${data.seasons[i].seasonNumber}`);
                 let newDiv = document.createElement('div');
                 newDiv.textContent = data.seasons[i].seasonNumber;
                 seasons.appendChild(newDiv);
             }
-        } else {
+        } else if (data.seasons.length === 1) {
+            seasonsHeader.textContent = 'Appears in season:';
             seasons.textContent = `${data.seasons[0].seasonNumber}`;
         }
         // seasons.textContent = `Featured in season ${data.seasons[0].seasonNumber}`;
