@@ -1,3 +1,8 @@
 .queen-pic {
     width: 50%;
 }
+
+.seasons {
+    border: solid 2px green;
+    height: 3em;
+}
