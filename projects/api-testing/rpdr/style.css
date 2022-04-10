@@ -5,4 +5,7 @@
 .seasons {
     border: solid 2px green;
     height: 3em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }

@@ -10,7 +10,7 @@ const famousQuote = document.querySelector('.quote');
 const seasons = document.querySelector('.seasons');
 const queenPic = document.querySelector('.queen-pic');
 
-fetch(`http://www.nokeynoshade.party/api/queens/34`)
+fetch(`http://www.nokeynoshade.party/api/queens/30`)
     .then(res => res.json())
     .then(data => {
         dragName.textContent = data.name;
@@ -18,10 +18,12 @@ fetch(`http://www.nokeynoshade.party/api/queens/34`)
         if (data.seasons.length > 1) {
             for (let i = 0; i < data.seasons.length; i++) {
                 console.log(`${data.seasons[i].seasonNumber}`);
-                let newDiv = document.createAttribute('div');
-                newDiv.value = data.seasons[i].seasonNumber;
-                seasons.setAttributeNode(newDiv);
+                let newDiv = document.createElement('div');
+                newDiv.textContent = data.seasons[i].seasonNumber;
+                seasons.appendChild(newDiv);
             }
+        } else {
+            seasons.textContent = `${data.seasons[0].seasonNumber}`;
         }
         // seasons.textContent = `Featured in season ${data.seasons[0].seasonNumber}`;
         queenPic.src = data.image_url;
