@@ -1,5 +1,7 @@
 'use strict';
 
+// https://pokeapi.co/docs/v2#resource-listspagination-section
+
 // Variables
 const goButton = document.querySelector('.go-button');
 const pokeName = document.querySelector('.poke-name');
