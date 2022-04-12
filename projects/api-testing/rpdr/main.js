@@ -24,7 +24,7 @@ fetch(`http://www.nokeynoshade.party/api/queens/19`)
                 newDiv.textContent = data.seasons[i].seasonNumber;
                 seasons.appendChild(newDiv);
             }
-        } else if (data.seasons.length === 1) {
+        } else if (data.seasons.length <= 1) {
             seasonsHeader.textContent = 'Appears in season:';
             seasons.textContent = `${data.seasons[0].seasonNumber}`;
         }
@@ -32,7 +32,6 @@ fetch(`http://www.nokeynoshade.party/api/queens/19`)
         queenPic.src = data.image_url;
         console.log(data);
         console.log('seasons: ', data.seasons.length);
-        console.log(data.seasons[0].seasonNumber)
     })
     .catch(err => {
         console.log(`error: ${err}`);
