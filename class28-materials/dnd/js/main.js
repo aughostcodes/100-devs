@@ -19,7 +19,6 @@ function getFetch() {
         .then(data => {
             console.log(data.index);
             console.log(data.subclasses);
-            // let ul = document.querySelector('ul');
 
             data.subclasses.forEach(obj => {
                 console.log(obj.name);
