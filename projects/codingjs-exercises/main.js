@@ -3,6 +3,7 @@
 /* The following were skipped and need to be revisited:
 Warmup-1: mixStart
 Warmup-1: everyNth
+Warmup-2: frontTimes
 */
 
 
@@ -344,3 +345,9 @@ function frontTimes(str, n) {
     }
 }
 // I don't know. I'm honestly just guessing at this point, and that's dumb
+
+/* countXX - Count the number of 'xx' in the given string. We'll say that overlapping is allowed, so 'xxx' contains 2 'xx'. */
+function countXX(str) {
+    let result = /xx/.text(str);
+    console.log('result: ', result);
+}
