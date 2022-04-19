@@ -3,7 +3,6 @@
 /* The following were skipped and need to be revisited:
 Warmup-1: mixStart
 Warmup-1: everyNth
-Warmup-2: frontTimes
 */
 
 
@@ -335,28 +334,49 @@ function stringTimes(str, n) {
 
 /* frontTimes - Given a string and a non-negative int n, we'll say that the front of the string is the first 3 chars, or whatever is there if the string is less than length 3. Return n copies of the front. */
 function frontTimes(str, n) {
-    let frontString = '';
     let result = '';
-    if (str.length >= 3) {
-        for (let i = 0; i < 3; i++) {
-            frontString += str.charAt(i);
-        }
-    } else {
-        for (let i = 0; i < str.length; i++) {
-            frontString += str.charAt(i);
-        }
-    }
+    let sliceStr = str.slice(0, 3);
     for (let i = 0; i < n; i++) {
-        result += frontString;
+        result += sliceStr;
     }
     return result;
 }
-// Surely I can chain the conditionals in the for loop? First attempt at that didn't pan out, but this solution passes all tests
-// Update: Couldn't manage with while loop either, hm...
+// Surely I can chain the conditionals in the for loop? First attempt at that didn't pan out, but this solution passes all tests:
+// if (str.length >= 3) {
+//     for (let i = 0; i < 3; i++) {
+//         frontString += str.charAt(i);
+//     }
+// } else {
+//     for (let i = 0; i < str.length; i++) {
+//         frontString += str.charAt(i);
+//     }
+// }
+// Update: All I needed was slice here :/ 
 
 /* countXX - Count the number of 'xx' in the given string. We'll say that overlapping is allowed, so 'xxx' contains 2 'xx'. */
 function countXX(str) {
-    let result = /xx/.text(str);
-    console.log('result: ', result);
+    let count = 0;
+    str = str.split('');
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] === 'x' && str[i + 1] === 'x') {
+            count++;
+        }
+    }
+    return count;
 }
-// Getting back into this daily
+// I keep trying to use array methods on strings and vice versa. Also, I REALLY need to study some regex
+
+/* doubleX - Given a string, return true if the first instance of "x" in the string is immediately followed by another "x". */
+function doubleX(str) {
+    let firstInstance = str.indexOf('x');
+    if (str.charAt(firstInstance) === 'x' && str.charAt(firstInstance + 1) === 'x') {
+        return true;
+    } return false;
+}
+// Somtimes ternaries don't work when I expect them to
+
+/* stringBits - Given a string, return a new string made of every other char starting with the first, so "Hello" yields "Hlo". */
+function stringBits(str) {
+    
+}
+// Could definitely do this with regex
