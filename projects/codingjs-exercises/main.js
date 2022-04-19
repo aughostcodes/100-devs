@@ -335,19 +335,28 @@ function stringTimes(str, n) {
 
 /* frontTimes - Given a string and a non-negative int n, we'll say that the front of the string is the first 3 chars, or whatever is there if the string is less than length 3. Return n copies of the front. */
 function frontTimes(str, n) {
-    let newStr = '';
-    let frontStr = '';
-    if (str.length <= 3) {
-        return newStr = str.slice(0, 4);
+    let frontString = '';
+    let result = '';
+    if (str.length >= 3) {
+        for (let i = 0; i < 3; i++) {
+            frontString += str.charAt(i);
+        }
     } else {
-        frontStr = str.substring(0, str.length - 3);
-        return `${newStr}${frontStr}`;
+        for (let i = 0; i < str.length; i++) {
+            frontString += str.charAt(i);
+        }
     }
+    for (let i = 0; i < n; i++) {
+        result += frontString;
+    }
+    return result;
 }
-// I don't know. I'm honestly just guessing at this point, and that's dumb
+// Surely I can chain the conditionals in the for loop? First attempt at that didn't pan out, but this solution passes all tests
+// Update: Couldn't manage with while loop either, hm...
 
 /* countXX - Count the number of 'xx' in the given string. We'll say that overlapping is allowed, so 'xxx' contains 2 'xx'. */
 function countXX(str) {
     let result = /xx/.text(str);
     console.log('result: ', result);
 }
+// Getting back into this daily
