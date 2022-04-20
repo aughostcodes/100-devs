@@ -156,6 +156,7 @@ let summation = function (num) {
     }
     return total;
 }
+// SOLVED; This is the current top answer as well, so that counts for something, I guess
 
 /* 8 kyu - Square(n) Sum
 Complete the square sum function so that it squares each number passed into it and then sums the results together.
@@ -166,3 +167,24 @@ function squareSum(numbers) {
     return newArr;
 }
 // SOLVED; That trailing 0 in reduce again... Also, tried forEach here first
+
+/* 8 kyu - Remove String Spaces
+Simple, remove the spaces from the string, then return the resultant string. */
+function noSpace(x) {
+    return x.split(' ').join('');
+}
+// SOLVED; Another reminder to learn regex
+
+/* 8 kyu - Counting sheep...
+Consider an array/list of sheep where some sheep may be missing from their place. We need a function that counts the number of sheep present in the array (true means present). */
+function countSheep(arrayOfSheep) {
+    let trueSheep = arrayOfSheep.filter(sheep => sheep);
+    return trueSheep.length;
+}
+// SOLVED; More concise, top answer:
+// return arrayOfSheeps.filter(Boolean).length;
+
+/* 8 kyu - Function 1 - hello world
+Make a simple function called greet that returns the most-famous "hello world!". */
+const greet = () => `hello world!`;
+// SOLVED; The easiest kata so far just pushed me to 6 kyu ranking. 12:42AM 04/20/2022
