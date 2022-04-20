@@ -394,9 +394,109 @@ function paperwork(n, m) {
 Consider the word "abode". We can see that the letter a is in position 1 and b is in position 2. In the alphabet, a and b are also in positions 1 and 2. Notice also that d and e in abode occupy the positions they would occupy in the alphabet, which are positions 4 and 5.
 Given an array of words, return an array of the number of letters that occupy their positions in the alphabet for each word. For example,
 solve(["abode","ABc","xyzD"]) = [4, 3, 1] */
+// https://www.codewars.com/kata/59d9ff9f7905dfeed50000b0/train/javascript
 function alphabetSymmetry(arr) {
     const alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
     console.log('alphabet: ', alphabet);
     // let alphaIndex = alphabet.filter((letter) => (letter));
 }
 // IN PROGRESS
+
+/* 8 kyu - Calculate BMI 
+Write function bmi that calculates body mass index (bmi = weight / height2).
+if bmi <= 18.5 return "Underweight"
+if bmi <= 25.0 return "Normal"
+if bmi <= 30.0 return "Overweight"
+if bmi > 30 return "Obese" */
+function calculateBMI(weight, height) {
+    let bmi = weight / (height**2);
+    if (bmi <= 18.5) {
+        return 'Underweight';
+    } else if (bmi <= 25.0) {
+        return 'Normal';
+    } else if (bmi <= 30.0) {
+        return 'Overweight';
+    } else {
+        return 'Obese';
+    }
+}
+// SOLVED
+
+/* 8 kyu - Calculate average
+Write a function which calculates the average of the numbers in a given list. */
+function findAverage(arr) {
+    if (!arr.length) {
+        return 0;
+    }
+    return (arr.reduce(((a, b) => (a + b)), 0)) / arr.length;
+}
+// SOLVED
+
+/* 8 kyu - Reversed sequence
+Build a function that returns an array of integers from n to 1 where n>0.
+Example : n=5 --> [5,4,3,2,1] */
+const reverseSequence = n => {
+    const reversedArr = [];
+    for (let i = n; i > 0; i--) {
+        reversedArr.push(i);
+    }
+    return reversedArr;
+}
+// SOLVED; Also top solution
+
+/* 8 kyu - DNA to RNA Conversion
+Deoxyribonucleic acid, DNA is the primary information storage molecule in biological systems. It is composed of four nucleic acid bases Guanine ('G'), Cytosine ('C'), Adenine ('A'), and Thymine ('T').
+Ribonucleic acid, RNA, is the primary messenger molecule in cells. RNA differs slightly from DNA its chemical structure and contains no Thymine. In RNA Thymine is replaced by another nucleic acid Uracil ('U').
+Create a function which translates a given DNA string into RNA.
+For example:
+"GCAT"  =>  "GCAU"
+The input string can be of arbitrary length - in particular, it may be empty. All input is guaranteed to be valid, i.e. each input string will only ever consist of 'G', 'C', 'A' and/or 'T'. */
+function convertDNAToRNA(dna) {
+    let rna = dna.split('').map(base => (base === 'T') ? (base = 'U') : base).join('');
+    return rna;
+}
+// SOLVED; Getting more and more proficient with map! The top solution is very simple regex lol
+
+/* 8 kyu - You only need one - Beginner
+You will be given an array a and a value x. All you need to do is check whether the provided array contains the value.
+Array can contain numbers or strings. X can be either.
+Return true if the array contains the value, false if not.*/
+const check = (a, x) => a.indexOf(x) === -1 ? false : true;
+// SOLVED; Could have used a.includes(x) for more concise answer
+
+/* 8 kyu - Are You Playing Banjo?
+Create a function which answers the question "Are you playing banjo?".
+If your name starts with the letter "R" or lower case "r", you are playing banjo!
+The function takes a name as its only argument, and returns one of the following strings:
+name + " plays banjo" 
+name + " does not play banjo" */
+function decideBanjoStatus(name) {
+    if (name.charAt(0) === 'R' || name.charAt(0) === 'r') {
+        return `${name} plays banjo`;
+    } return `${name} does not play banjo`;
+}
+// SOLVED; I like the top solution, though:
+// return name + (name[0].toLowerCase() == 'r' ? ' plays' : ' does not play') + " banjo";
+
+/* 7 kyu - Filter unused digits
+Given a varying number of integer arguments, return the digits that are not present in any of them.
+Example:
+[12, 34, 56, 78]  =>  "09"
+[2015, 8, 26]     =>  "3479"
+Note: the digits in the resulting string should be sorted. */
+// https://www.codewars.com/kata/55de6173a8fbe814ee000061
+function unusedDigits() {
+
+}
+
+/* 7 kyu - Disemvowel Trolls
+Trolls are attacking your comment section!
+A common way to deal with this situation is to remove all of the vowels from the trolls' comments, neutralizing the threat.
+Your task is to write a function that takes a string and return a new string with all vowels removed.
+For example, the string "This website is for losers LOL!" would become "Ths wbst s fr lsrs LL!".
+Note: for this kata y isn't considered a vowel. */
+function disemvowel(str) {
+    return str.replace(/[aeiou]/gi, '');
+}
+// SOLVED; Definitely Googled this, but quick solution
+
