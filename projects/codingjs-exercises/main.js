@@ -3,6 +3,7 @@
 /* The following were skipped and need to be revisited:
 Warmup-1: mixStart
 Warmup-1: everyNth
+Warmup-2: stringSplosion
 */
 
 
@@ -391,3 +392,17 @@ function stringBits(str) {
 // }
 // return newArr.join('');
 // Then refactored with filter
+
+/* stringSplosion - Given a non-empty string like "Code" return a string like "CCoCodCode". */
+function stringSplosion(str) {
+    let anotherString = '';
+    let index = 0;
+
+    for (let i = 0; i < str.length; i++) {
+        anotherString += str.charAt(i) + str.charAt(i + 1);
+        index += 2;
+    }
+    // anotherString += str.charAt(index) + str.charAt(index++);
+    console.log('anotherString: ', anotherString);
+}
+// Confused here, getting close but not really
