@@ -355,3 +355,48 @@ function getAverage(grades) {
 }
 // SOLVED
 
+/* 8 kyu - Reversed Words
+Complete the solution so that it reverses all of the words within the string passed in.
+Example:
+"The greatest victory is that which requires no battle" --> "battle no requires which that is victory greatest The" */
+function reverseSentence(str) {
+    return str.split(' ').reverse().join(' ');
+}
+// SOLVED
+
+/* 8 kyu - Fake Binary
+Given a string of digits, you should replace any digit below 5 with '0' and any digit 5 and above with '1'. Return the resulting string. */
+function fakeBinary(x) {
+    return x.split('').map(num => num < 5 ? 0 : 1).join('');
+}
+// SOLVED; I legit did this by myself, no Googling. Maybe it could be better, but I'm happy
+
+/* 8 kyu - Is he gonna survive?
+A hero is on his way to the castle to complete his mission. However, he's been told that the castle is surrounded with a couple of powerful dragons! each dragon takes 2 bullets to be defeated, our hero has no idea how many bullets he should carry.. Assuming he's gonna grab a specific given number of bullets and move forward to fight another specific given number of dragons, will he survive?
+Return True if yes, False otherwise :) */
+function hero(bullets, dragons) {
+    return (bullets < dragons * 2) ? false : true;
+}
+// SOLVED; Can just take out the ternary: return bullets >= dragons * 2;
+
+/* 8 kyu - Beginner Series #1 School Paperwork
+Your classmates asked you to copy some paperwork for them. You know that there are 'n' classmates and the paperwork has 'm' pages.
+Your task is to calculate how many blank pages do you need. If n < 0 or m < 0 return 0.
+Example:
+n= 5, m=5: 25
+n=-5, m=5:  0 */
+function paperwork(n, m) {
+    return (n < 0 || m < 0) ? 0 : n * m;
+}
+// SOLVED; Feeling good about noticing when I can refactor more quickly
+
+/* 7 kyu - Alphabet symmetry
+Consider the word "abode". We can see that the letter a is in position 1 and b is in position 2. In the alphabet, a and b are also in positions 1 and 2. Notice also that d and e in abode occupy the positions they would occupy in the alphabet, which are positions 4 and 5.
+Given an array of words, return an array of the number of letters that occupy their positions in the alphabet for each word. For example,
+solve(["abode","ABc","xyzD"]) = [4, 3, 1] */
+function alphabetSymmetry(arr) {
+    const alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+    console.log('alphabet: ', alphabet);
+    // let alphaIndex = alphabet.filter((letter) => (letter));
+}
+// IN PROGRESS
