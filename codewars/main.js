@@ -485,9 +485,17 @@ Example:
 [2015, 8, 26]     =>  "3479"
 Note: the digits in the resulting string should be sorted. */
 // https://www.codewars.com/kata/55de6173a8fbe814ee000061
-function unusedDigits() {
-
+function unusedDigits(...input) {
+    const absent = [];
+    input = input.toString().split('').filter(entry => entry !== ',').map(Number);
+    for (let i = 0; i < 10; i++) {
+        if (input.indexOf(i) === -1) {
+            absent.push(i);
+        }
+    }
+    return absent.toString().split(',').join('');
 }
+// SOLVED; Mine is a bit more convoluted, and of course REGEX EXISTS, but lfg
 
 /* 7 kyu - Disemvowel Trolls
 Trolls are attacking your comment section!
