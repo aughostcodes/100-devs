@@ -188,3 +188,170 @@ function countSheep(arrayOfSheep) {
 Make a simple function called greet that returns the most-famous "hello world!". */
 const greet = () => `hello world!`;
 // SOLVED; The easiest kata so far just pushed me to 6 kyu ranking. 12:42AM 04/20/2022
+
+/* 8 kyu - Convert a String to a Number!
+We need a function that can transform a string into a number. What ways of achieving this do you know? */
+function stringToNumber(str) {
+    return Number(str);
+}
+// SOLVED
+
+/* 8 kyu - Basic Mathematical Operations
+Your task is to create a function that does four basic mathematical operations.
+The function should take three arguments - operation(string/char), value1(number), value2(number).
+The function should return result of numbers after applying the chosen operation. */
+function basicOp(operation, val1, val2) {
+    if (operation === '+') {
+        return val1 + val2;
+    } else if (operation === '-') {
+        return val1 - val2;
+    } else if (operation === '*') {
+        return val1 * val2;
+    } else if (operation === '/') {
+        return val1 / val2;
+    } else {
+        return 'Please enter valid operator.'
+    }
+}
+// SOLVED; Switch case here, also
+
+/* 8 kyu - Convert number to reversed array of digits
+Given a random non-negative number, you have to return the digits of this number within an array in reverse order. */
+function digitize(n) {
+    return n.toString().split('').reverse().map(Number);
+}
+// SOLVED; Honestly figured this out pretty easily, but SO'd the map(Number) bit. Try to commit that one to memory. Looks like a lot of the solutions use map(Number) as well
+
+/* 8 kyu - Abbreviate a Two Word Name
+Write a function to convert a name into initials. This kata strictly takes two words with one space in between them.
+The output should be two capital letters with a dot separating them.
+It should look like this:
+Sam Harris => S.H
+patrick feeney => P.F */
+function abbrevName(name) {
+    let nameArr = name.split(' ');
+    let firstInit = nameArr[0].charAt(0).toUpperCase();
+    let lastInit = nameArr[1].charAt(0).toUpperCase();
+    return `${firstInit}.${lastInit}`;
+}
+// SOLVED; But I do like this solution as well:
+// return (nameArray[0][0] + "." + nameArray[1][0]).toUpperCase();
+
+/* 8 kyu - Is n divisible by x and y?
+Create a function that checks if a number n is divisible by two numbers x AND y. All inputs are positive, non-zero digits. */
+function isDivisible(n, x, y) {
+    return n % x === 0 && n % y === 0;
+}
+// SOLVED
+
+/* 8 kyu - Beginner - Lost Without a Map
+Given an array of integers, return a new array with each value doubled.
+For example:
+[1, 2, 3] --> [2, 4, 6] */
+function maps(x) {
+    return x.map(num => num * 2);
+}
+// SOLVED
+
+/* 8 kyu - A Needle in the Haystack
+Can you find the needle in the haystack?
+Write a function findNeedle() that takes an array full of junk but containing one "needle"
+After your function finds the needle it should return a message (as a string) that says:
+"found the needle at position " plus the index it found the needle, so:
+findNeedle(['hay', 'junk', 'hay', 'hay', 'moreJunk', 'needle', 'randomJunk'])
+should return "found the needle at position 5" (in COBOL "found the needle at position 6") */
+function findNeedle(haystack) {
+    return `found the needle at position ${haystack.findIndex(element => element === 'needle')}`;
+}
+// SOLVED
+
+/* 8 kyu - Convert a Boolean to a String
+Implement a function which convert the given boolean value into its string representation. */
+function boolToString(b) {
+    return (b) ? "true" : "false";
+}
+// SOLVED; Also could have just b.toString()
+
+/* 8 kyu - You Can't Code Under Pressure #1
+Code as fast as you can! You need to double the integer and return it. */
+function doubleInteger(i) {
+    return i * 2;
+}
+// SOLVED
+
+/* 8 kyu - Jenny's secret message
+Jenny has written a function that returns a greeting for a user. However, she's in love with Johnny, and would like to greet him slightly different. She added a special case to her function, but she made a mistake. */
+function secretHello(name) {
+    if (name === 'Johnny') {
+        return `Hello, my love!`;
+    } else {
+        return `Hello, ${name}!`;
+    }
+}
+// SOLVED
+
+/* 8 kyu - Invert values
+Given a set of numbers, return the additive inverse of each. Each positive becomes negatives, and the negatives become positives.
+invert([1,2,3,4,5]) == [-1,-2,-3,-4,-5]
+invert([1,-2,3,-4,5]) == [-1,2,-3,4,-5]
+invert([]) == []
+You can assume that all values are integers. Do not mutate the input array/list. */
+function invertArray(arr) {
+    return arr.map(num => -(num));
+}
+// SOLVED
+
+/* 8 kyu - Beginner Series #2 Clock
+Clock shows h hours, m minutes and s seconds after midnight.
+Your task is to write a function which returns the time since midnight in milliseconds.
+Example:
+h = 0
+m = 1
+s = 1
+result = 61000
+Input constraints:
+0 <= h <= 23
+0 <= m <= 59
+0 <= s <= 59 */
+// https://www.codewars.com/kata/55f9bca8ecaa9eac7100004a/train/javascript
+function past(h, m, s) {
+
+}
+// Skipping this for now, because... math
+
+/* 8 kyu - Count of positives / sum of negatives
+Given an array of integers.
+Return an array, where the first element is the count of positives numbers and the second element is sum of negative numbers. 0 is neither positive nor negative.
+If the input is an empty array or is null, return an empty array.
+Example
+For input [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15], you should return [10, -65]. */
+function countPosSumNeg(input) {
+    let pos = input.filter(num => num > 0).length;
+    let neg = input.filter(num => num < 0);
+    if (!input || input.length === 0) {
+        return [];
+    }
+    if (neg.length < 1) {
+        neg = 0;
+    } else {
+        neg = neg.reduce((a, b) => a + b);
+    }
+    return [pos, neg];
+}
+// SOLVED
+
+/* 8 kyu - MakeUpperCase
+Write a function which converts the input string to uppercase. */
+function makeUpperCase(str) {
+    return str.toUpperCase();
+}
+// SOLVED
+
+/* 8 yu - Get the mean of an array
+It's the academic year's end, fateful moment of your school report. The averages must be calculated. All the students come to you and entreat you to calculate their average for them. Easy ! You just need to write a script.
+Return the average of the given array rounded down to its nearest integer. */
+function getAverage(grades) {
+    return Math.floor(grades.reduce((a, b) => a + b) / grades.length);
+}
+// SOLVED
+
