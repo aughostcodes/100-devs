@@ -371,12 +371,23 @@ function doubleX(str) {
     let firstInstance = str.indexOf('x');
     if (str.charAt(firstInstance) === 'x' && str.charAt(firstInstance + 1) === 'x') {
         return true;
-    } return false;
+    }
+    return false;
 }
 // Somtimes ternaries don't work when I expect them to
 
 /* stringBits - Given a string, return a new string made of every other char starting with the first, so "Hello" yields "Hlo". */
 function stringBits(str) {
-    
+    str = str.split('');
+    let newStr = str.filter((element, index) => index === 0 || index % 2 === 0).join('');
+    return newStr;
 }
 // Could definitely do this with regex
+// let newArr = [];
+// for (let i = 0; i < str.length; i++) {
+//     if (i === 0 || i % 2 === 0) {
+//         newArr.push(str[i]);
+//     }
+// }
+// return newArr.join('');
+// Then refactored with filter
