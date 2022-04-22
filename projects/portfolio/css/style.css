@@ -1,10 +1,4 @@
 /* colors:
-#cee6fa; light blue
-#191a18; black
-#f6d72b; yellow
-#4e5f5c; green
-https://huemint.com/website-2/#palette=cee6fa-191a18-f6d72b-4e5f5c
-
 Dark blue - #252d39;
 Gold - #9b6a48;
 Peach - #c78e68;
@@ -12,12 +6,37 @@ Lilac - #d4bbad;
 https://huemint.com/back-gradient-3/#palette=252d39-9b6a48-c78e68-d4bbad
 */
 
+/* Earth colored palette
+https://huemint.com/website-2/#palette=05160f-fffffe-b8d68c-b98645
+*/
+
+/* Purples 
+https://huemint.com/back-gradient-2/#palette=060003-707490-aaa7b9
+*/
+
+/* Navy and golds
+https://huemint.com/back-gradient-3/#palette=252d39-9b6a48-c78e68-d4bbad
+*/
+
+/* Sharpeye Eagle gradient
+background-image: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%);
+*/
+
+:root {
+    /* Earth colored palette */
+    --dark-green: #05160f;
+    --medium-green: #0A1B14;
+    --light-green: #b8d68c;
+    --white: #fffffe;
+    --gold: #b98645;
+}
+
 * {
     margin: 0;
     padding: 0;
     font-family: 'IBM Plex Mono', 'Helvetica', sans-serif;
-    background-color: #252d39;
-    color: #d4bbad;
+    background-color: var(--dark-green);
+    color: var(--white);
 }
 
 .main-container {
@@ -35,7 +54,7 @@ https://huemint.com/back-gradient-3/#palette=252d39-9b6a48-c78e68-d4bbad
 }
 
 .my-name {
-    color: #4e5f5c;
+    color: var(--gold);
 }
 
 .intro-text {
@@ -44,7 +63,7 @@ https://huemint.com/back-gradient-3/#palette=252d39-9b6a48-c78e68-d4bbad
 }
 
 .intro-text p:last-child {
-    color: red;
+    /* color: red; */
     margin: 1em 0;
 }
 
@@ -60,7 +79,7 @@ https://huemint.com/back-gradient-3/#palette=252d39-9b6a48-c78e68-d4bbad
 .projects h3 {
     margin: 1em;
     text-align: center;
-    color: #9b6a48;
+    color: var(--gold);
 }
 
 .card-container {
@@ -69,55 +88,189 @@ https://huemint.com/back-gradient-3/#palette=252d39-9b6a48-c78e68-d4bbad
 }
 
 .project-card {
-    background: #c78e68;
+    background: var(--light-green);
     padding: 1em;
     margin: 1em 2em;
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
     flex-grow: 1;
 }
 
 .card-img {
-    width: 50%;
-    background: #c78e68;
+    width: 10rem;
+    height: 10rem;
+    background: var(--light-green);
 }
-/* Maybe a pseudo-element to slide up more information over the image, i.e. live site vs code link */
 
 .card-text {
     width: 50%;
     font-size: 1em;
-    background: #c78e68;
+    color: (--dark-green);
+    background-color: var(--light-green);
+
+    /* color: var(--dark-green); Why doesn't make child elements change? */
 }
 
-.project-desc {
-    color: orange;
-    background: #c78e68;
+.card-text p {
+    background: var(--light-green);
+    color: var(--dark-green);
+}
+
+/* .project-desc {
 }
 
 .project-problem {
-    color: teal;
 }
 
 .project-solved {
-    color: red;
 }
 
 .project-thoughts {
-    color: blue;
-}
+} */
 
 
 /* .about-me {
     
 } */
 
+/* #707490 */
 
-
-
-
-footer {
-    border: green 1px solid;
+.contact-me h3 {
     text-align: center;
+    margin: 4rem 0 0;
+}
+
+.register-wrapper {
+    /* background-image: linear-gradient(to bottom, var(--dark-green) 20%, var(--medium-green) 20%, var(--light-green) 60%); */
+    /* background-image: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%); */
+    /* background-image: linear-gradient(to top, rgba(184,214,140,1) 0%, rgba(184,214,140,1) 20%, rgba(5,22,15,1) 89%); */
+    background-image: linear-gradient(to top, rgba(185,134,69,1) 0%, rgba(184,185,114,1) 13%, rgba(184,214,140,1) 33%, rgba(85,108,71,1) 57%, rgba(5,22,15,1) 89%);;
+    position: relative;
+    z-index: 3;
+    padding: 4rem;
+    color: #999;
+    font-size: 1rem;
+}
+
+.register-wrapper form input {
+    display: inline-block;
+    width: 100%;
+    line-height: 50px;
+    height: 50px;
+    background: var(--white);
+    border: solid 2px var(--dark-green);
+    border-bottom-width: 4px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.register-wrapper form input:first-child {
+    margin-top: 20px;
+}
+
+.register-wrapper form input:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.register-wrapper form input[type="email"]:focus,
+.register-wrapper form input[type="email"]:active,
+.register-wrapper form input[type="password"]:focus,
+.register-wrapper form input[type="password"]:active {
+    border-color: var(--gold);
+}
+
+.register-wrapper form input[type="submit"] {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    padding: 0 20px;
+    background-color: var(--gold);
+    background-size: 20px 20px;
+    background-image: linear-gradient(45deg,
+            rgba(255, 255, 255, 0.15) 25%,
+            rgba(0, 0, 0, 0) 25%,
+            rgba(0, 0, 0, 0) 50%,
+            rgba(255, 255, 255, 0.15) 50%,
+            rgba(255, 255, 255, 0.15) 75%,
+            rgba(0, 0, 0, 0) 75%,
+            rgba(0, 0, 0, 0));
+    border: solid 1px var(--gold);
+    border-bottom-width: 3px;
+    color: var(--dark-green);
+    font-weight: 700;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.register-wrapper form input[type="submit"]:hover {
+    background-size: 40px 40px;
+}
+
+.register-title {
+    font-size: 1.4rem;
+    padding-bottom: 20px;
+    margin: 0 0 20px;
+    border-bottom: dashed 1px #e6e6e6;
+}
+
+.register-block {
+    position: relative;
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: var(--dark-green);
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.register-block::before,
+.register-block::after {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background: var(--white);
+    border: solid 1px var(--white);
+    border-radius: 5px;
+    transform: scale(0.9) translate(0, 0);
+    transition: all 0.3s ease;
+}
+
+.register-block::after {
+    /* transition-delay: 0.08s; */
+    transition: all 0.5s ease;
+}
+
+.register-block:hover::before {
+    transform: scale(0.96) translate(0, 16px);
+    z-index: -1;
+}
+
+.register-block:hover::after {
+    transform: scale(0.92) translate(0, 32px);
+    z-index: -2;
+}
+
+
+
+
+
+footer * {
+    /* border: green 1px solid; */
+    text-align: center;
+    /* color: var(--dark-green); */
+    background: var(--dark-green);
 }
 
 footer span {
@@ -135,7 +288,7 @@ footer span {
 }
 
 .social-icon:hover {
-    color: green;
+    color: var(--gold);
     transform: scale(125%);
 }
 
@@ -146,3 +299,34 @@ footer span {
         flex-direction: column;
     }
 }
+
+/* =====================================
+USEFUL BROKEN IMAGES FROM CSS IN 30 DAYS
+===================================== */
+
+/* .image {
+	position: relative;
+	display: inline-block;
+	font-size: 1rem;
+	text-align: center;
+	text-transform: uppercase;
+	margin: 0 0 40px;
+} */
+/* 
+.image::after {
+	display: inherit;
+	position: absolute;
+	content: "" attr(alt) " Not Found";
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-width: 200px;
+	padding: 10px 20px 10px 45px;
+	border: dashed 1px #888;
+	background-color: #f0f0f0;
+	background-image: url(noimage.png);
+	background-size: 10%;
+	background-repeat: no-repeat;
+	background-position: 15px 10px;
+	z-index: 1;
+} */
