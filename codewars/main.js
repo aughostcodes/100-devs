@@ -538,11 +538,12 @@ Dog Years
 const humanYearsCatYearsDogYears = function (humanYears) {
     let catYears = 0;
     let dogYears = 0;
+    let result = [];
     for (let i = 0; i <= humanYears; i++) {
-        if (humanYears === 1) {
+        if (i === 1) {
             catYears += 15;
             dogYears += 15;
-        } else if (humanYears === 2) {
+        } else if (i === 2) {
             catYears += 9;
             dogYears += 9;
         } else {
@@ -550,7 +551,6 @@ const humanYearsCatYearsDogYears = function (humanYears) {
             dogYears += 5;
         }
     }
-    console.log(catYears);
-    console.log(dogYears);
+    return result = [humanYears, catYears, dogYears];
 }
-// I just found Julia Child videos on YT, so bye
+// Result is not correct 10 should be [10, 56, 64] but is [10, 60, 69]
