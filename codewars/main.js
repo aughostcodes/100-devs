@@ -409,7 +409,7 @@ if bmi <= 25.0 return "Normal"
 if bmi <= 30.0 return "Overweight"
 if bmi > 30 return "Obese" */
 function calculateBMI(weight, height) {
-    let bmi = weight / (height**2);
+    let bmi = weight / (height ** 2);
     if (bmi <= 18.5) {
         return 'Underweight';
     } else if (bmi <= 25.0) {
@@ -473,7 +473,8 @@ name + " does not play banjo" */
 function decideBanjoStatus(name) {
     if (name.charAt(0) === 'R' || name.charAt(0) === 'r') {
         return `${name} plays banjo`;
-    } return `${name} does not play banjo`;
+    }
+    return `${name} does not play banjo`;
 }
 // SOLVED; I like the top solution, though:
 // return name + (name[0].toLowerCase() == 'r' ? ' plays' : ' does not play') + " banjo";
@@ -534,7 +535,22 @@ Dog Years
 15 dog years for first year
 +9 dog years for second year
 +5 dog years for each year after that */
-const humanYearsCatYearsDogYears = function(humanYears) {
-
+const humanYearsCatYearsDogYears = function (humanYears) {
+    let catYears = 0;
+    let dogYears = 0;
+    for (let i = 0; i <= humanYears; i++) {
+        if (humanYears === 1) {
+            catYears += 15;
+            dogYears += 15;
+        } else if (humanYears === 2) {
+            catYears += 9;
+            dogYears += 9;
+        } else {
+            catYears += 4;
+            dogYears += 5;
+        }
+    }
+    console.log(catYears);
+    console.log(dogYears);
 }
 // I just found Julia Child videos on YT, so bye
