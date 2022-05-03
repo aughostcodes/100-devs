@@ -538,7 +538,7 @@ Dog Years
 const humanYearsCatYearsDogYears = function (humanYears) {
     let catYears = 0;
     let dogYears = 0;
-    let result = [];
+    // let result = [];
     for (let i = 0; i <= humanYears; i++) {
         if (i === 1) {
             catYears += 15;
