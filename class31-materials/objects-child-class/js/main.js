@@ -90,7 +90,7 @@ class Turtle extends Animal {
     }
 
     speak() {
-        console.log(`${this.name} isn't great at speaking.`);
+        return `${this.name} isn't great at speaking.`;
     }
 }
 
@@ -106,23 +106,23 @@ class Dog extends Animal {
 
     speak() {
         super.speak();
-        console.log(`${this.name} barks!`);
+        return `${this.name} barks!`;
     }
 }
 
 class Cat extends Animal {
-    constructor(name, breed) {
+    constructor(name, color) {
         super(name);
-        this._breed = breed;
+        this._color = color;
     }
 
-    get breed() {
-        return this._breed;
+    get color() {
+        return this._color;
     }
 
     speak() {
         super.speak();
-        console.log(`${this.name} meows!`);
+        return `${this.name} meows!`;
     }
 }
 
@@ -131,14 +131,19 @@ console.log('franklin ', franklin);
 
 const kalea = new Dog('Kalea', 'mutt');
 console.log('kalea: ', kalea);
-console.log(kalea.speak());
 
-const desmond = new Cat ('Desmond', 'meww');
-console.log(desmond.speak());
+const desmond = new Cat ('Desmond', 'tuxedo');
+console.log('desmond: ', desmond);
 
 let farm = [franklin, kalea, desmond];
 console.log('farm: ', farm);
 
 for (i of farm) {
     console.log(i.speak());
+    console.log(Object.entries);
 }
+
+// {
+//     "_name": "Franklin",
+//     "_hatColor": "red"
+// }
