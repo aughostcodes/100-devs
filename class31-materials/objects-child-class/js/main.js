@@ -129,13 +129,13 @@ class Cat extends Animal {
 const franklin = new Turtle('Franklin', 'red');
 console.log('franklin ', franklin);
 
-const kalea = new Dog('Kalea', 'mutt');
-console.log('kalea: ', kalea);
+const freckles = new Dog('freckles', 'mutt');
+console.log('freckles: ', freckles);
 
 const desmond = new Cat ('Desmond', 'tuxedo');
 console.log('desmond: ', desmond);
 
-let farm = [franklin, kalea, desmond];
+let farm = [franklin, freckles, desmond];
 console.log('farm: ', farm);
 
 for (i of farm) {
