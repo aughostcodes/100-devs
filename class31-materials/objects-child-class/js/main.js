@@ -79,6 +79,22 @@ class Animal {
     }
 }
 
+class Frog extends Animal {
+    constructor(name, furniture) {
+        super(name);
+        this._furniture = furniture;
+    }
+
+    get furniture() {
+        return this._furniture;
+    }
+
+    speak() {
+        super.speak();
+        return `${this.name} ribbits!`;
+    }
+}
+
 class Turtle extends Animal {
     constructor(name, hatColor) {
         super(name);
@@ -132,11 +148,14 @@ console.log('franklin ', franklin);
 const freckles = new Dog('freckles', 'mutt');
 console.log('freckles: ', freckles);
 
-const desmond = new Cat ('Desmond', 'tuxedo');
+const desmond = new Cat('Desmond', 'tuxedo');
 console.log('desmond: ', desmond);
 
 let farm = [franklin, freckles, desmond];
 console.log('farm: ', farm);
+
+const froggy = new Frog('Croaky', 'chair');
+console.log('froggy: ', froggy);
 
 for (i of farm) {
     console.log(i.speak());
