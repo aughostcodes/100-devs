@@ -566,6 +566,21 @@ Welcome. In this kata, you are asked to square every digit of a number and conca
 For example, if we run 9119 through the function, 811181 will come out, because 92 is 81 and 12 is 1. */
 function squareDigits(num) {
     let splitNumArr = num.toString().split('');
-    return result = Number(splitNumArr.map(num => num**2).join(''));
+    return result = Number(splitNumArr.map(num => num ** 2).join(''));
 }
 // SOLVED; Some good alternative solutions but I'm not upset with mine for readability purposes, honestly
+
+/* 7 kyu - Jaden Casing Strings
+Your task is to convert strings to how they would be written by Jaden Smith. The strings are actual quotes from Jaden Smith, but they are not capitalized in the same way he originally typed them.
+Example:
+Not Jaden-Cased: "How can mirrors be real if our eyes aren't real"
+Jaden-Cased:     "How Can Mirrors Be Real If Our Eyes Aren't Real" */
+function capitalizedFirstLetter(str) {
+    return str.toLowerCase().split(' ').map(word => word[0].toUpperCase() + word.substring(1)).join(' ');
+}
+// SOLVED? My solution above works in console but does not pass tests. Kata is written to accept prototype chaining only
+// String.prototype.toJadenCase = function() {
+//   return this.split(' ').map(item => item[0].toUpperCase() + item.slice(1)).join(' ')
+// };
+// Need to work on understanding 'this' (even more)
+
