@@ -558,3 +558,14 @@ const humanYearsCatYearsDogYears = function (humanYears) {
 /* 8 kyu - Plural
 We need a simple function that determines if a plural is needed or not. It should take a number, and return true if a plural should be used with that number or false if not. This would be useful when printing out a string such as 5 minutes, 14 apples, or 1 sun. */
 // https://www.codewars.com/kata/52ceafd1f235ce81aa00073a/train/javascript
+const plural = (n) => n !== 1;
+// SOLVED
+
+/* 7 kyu - Square Every Digit
+Welcome. In this kata, you are asked to square every digit of a number and concatenate them.
+For example, if we run 9119 through the function, 811181 will come out, because 92 is 81 and 12 is 1. */
+function squareDigits(num) {
+    let splitNumArr = num.toString().split('');
+    return result = Number(splitNumArr.map(num => num**2).join(''));
+}
+// SOLVED; Some good alternative solutions but I'm not upset with mine for readability purposes, honestly
