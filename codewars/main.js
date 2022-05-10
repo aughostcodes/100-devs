@@ -554,3 +554,7 @@ const humanYearsCatYearsDogYears = function (humanYears) {
     return result = [humanYears, catYears, dogYears];
 }
 // Result is not correct 10 should be [10, 56, 64] but is [10, 60, 69]
+
+/* 8 kyu - Plural
+We need a simple function that determines if a plural is needed or not. It should take a number, and return true if a plural should be used with that number or false if not. This would be useful when printing out a string such as 5 minutes, 14 apples, or 1 sun. */
+// https://www.codewars.com/kata/52ceafd1f235ce81aa00073a/train/javascript
