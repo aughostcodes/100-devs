@@ -596,3 +596,22 @@ function dontGiveMeFive(start, end) {
     }
     return resultArr = numArr.filter(num => !(num % 5 === 0 && num % 10 !== 0));
 }
+// SOLUTION; Worked for smaller test numbers, but 50/500/etc do not pass tests
+// Regex solution:
+// function dontGiveMeFive(start, end) {
+//     let count = 0
+//     for (let i = start; i <= end; i++) {
+//         if (!/5/.test(i)) {
+//             count++
+//         }
+//     }
+//     return count
+// }
+// String solution:
+// function dontGiveMeFive(start, end) {
+//     let res = [];
+//     for (let i = start; i <= end; i++) {
+//         if (!i.toString().includes('5')) res.push(i);
+//     }
+//     return res.length;
+// }
