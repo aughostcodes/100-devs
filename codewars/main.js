@@ -591,10 +591,8 @@ Examples:
 4,17 -> 4,6,7,8,9,10,11,12,13,14,16,17 -> Result 12 */
 function dontGiveMeFive(start, end) {
     const numArr = []
-    // const resultArr = [];
     for (let i = start; i <= end; i++) {
         numArr.push(i);
     }
-    console.log('numArr: ', numArr);
-    // return resultArr = numArr.filter(num => num % 5 !== 0 || num % 10 !== 0);
+    return resultArr = numArr.filter(num => !(num % 5 === 0 && num % 10 !== 0));
 }
