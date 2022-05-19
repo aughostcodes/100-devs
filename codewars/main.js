@@ -591,10 +591,48 @@ Examples:
 4,17 -> 4,6,7,8,9,10,11,12,13,14,16,17 -> Result 12 */
 function dontGiveMeFive(start, end) {
     const numArr = []
-    // const resultArr = [];
     for (let i = start; i <= end; i++) {
         numArr.push(i);
     }
-    console.log('numArr: ', numArr);
-    // return resultArr = numArr.filter(num => num % 5 !== 0 || num % 10 !== 0);
+    return resultArr = numArr.filter(num => !(num % 5 === 0 && num % 10 !== 0));
 }
+// SOLUTION; Worked for smaller test numbers, but 50/500/etc do not pass tests
+// Regex solution:
+// function dontGiveMeFive(start, end) {
+//     let count = 0
+//     for (let i = start; i <= end; i++) {
+//         if (!/5/.test(i)) {
+//             count++
+//         }
+//     }
+//     return count
+// }
+// String solution:
+// function dontGiveMeFive(start, end) {
+//     let res = [];
+//     for (let i = start; i <= end; i++) {
+//         if (!i.toString().includes('5')) res.push(i);
+//     }
+//     return res.length;
+// }
+
+/* 7 kyu - Odd or Even?
+Given a list of integers, determine whether the sum of its elements is odd or even.
+Give your answer as a string matching "odd" or "even".
+If the input array is empty consider it as: [0] (array with a zero).
+Examples:
+Input: [0]
+Output: "even"
+Input: [0, 1, 4]
+Output: "odd"
+Input: [0, -1, -5]
+Output: "even" */
+function oddOrEven(array) {
+    if (array.length === 0) {
+        return 'even';
+    } else {
+        const resultArr = array.reduce((a, b) => a + b);
+        return Math.abs(resultArr) % 2 === 0 ? 'even' : 'odd';
+    }
+}
+// SOLVED; Top result: return arr.reduce((a,b)=>a+b,0) % 2 ? 'odd' : 'even';
