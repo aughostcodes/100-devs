@@ -11,6 +11,7 @@ let classDateText = document.querySelector('.class-date');
 let classVideo = document.querySelector('.class-video');
 let classVideoUrl = document.querySelector('#class-video-url');
 let classVideoInfo = document.querySelector('.class-video-info');
+let classUlText = document.querySelector('.class-ul-text');
 let classMaterials = document.querySelector('.class-materials');
 let classMaterialsUrl = document.querySelector('#class-materials-url');
 let classSolutions = document.querySelector('.class-solutions');
@@ -34,6 +35,14 @@ function createNewEntryInDom() {
     let newEntryDisplay = classDetails.cloneNode(true);
     console.log('newEntryDisplay: ', newEntryDisplay);
     classContainer.appendChild(newEntryDisplay);
+}
+
+function resetTextContent() {
+    console.log(typeof(classUlText));
+    // classUlText.textContent.style.display = 'block';
+    // classUlText.array.forEach(element => {
+        
+    // });
 }
 
 // newDetailEntry.classList.add('class-details');
@@ -116,6 +125,7 @@ class NewClassEntry {
         this.changeSlidesLink();
         this.changeMotivationLink();
         this.changeCheckinLink();
+        resetTextContent();
         createNewEntryInDom();
     };
 }
@@ -171,12 +181,12 @@ const class02 = new NewClassEntry(
 
 class02.runAllCreateEntryFunctions();
 
-const class03 = new NewClassEntry(
-    `03`,
-    `Aug 30`,
-);
+// const class03 = new NewClassEntry(
+//     `03`,
+//     `Aug 30`,
+// );
 
-class03.runAllCreateEntryFunctions();
+// class03.runAllCreateEntryFunctions();
 
 const class04 = new NewClassEntry(
     `04`,
