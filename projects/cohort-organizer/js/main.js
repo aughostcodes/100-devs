@@ -15,6 +15,7 @@ let classMaterials = document.querySelector('.class-materials');
 let classMaterialsUrl = document.querySelector('#class-materials-url');
 let classSolutions = document.querySelector('.class-solutions');
 let classSolutionsUrl = document.querySelector('#class-solutions-url');
+let classSlides = document.querySelector('.class-slides');
 let classSlidesUrl = document.querySelector('#class-slides-url');
 let classMotivation = document.querySelector('.class-motivation');
 let classMotivationUrl = document.querySelector('#class-motivation-url');
@@ -28,10 +29,9 @@ let classCheckinUrl = document.querySelector('#class-checkin-url');
 ##########################
 ======================= */
 
-function createNewEntryInDom(classNum) {
-    let classNumVariable = classNum;
-    let originalEntry = document.querySelector('.original-details');
-    let newEntryDisplay = originalEntry.cloneNode(true);
+function createNewEntryInDom() {
+    let classDetails = document.querySelector('.class-details');
+    let newEntryDisplay = classDetails.cloneNode(true);
     console.log('newEntryDisplay: ', newEntryDisplay);
     classContainer.appendChild(newEntryDisplay);
 }
@@ -62,6 +62,9 @@ class NewClassEntry {
     }
 
     changeVideoLink() {
+        if (!this.videoLink) {
+            classVideo.textContent = `No recorded video for this class`;
+        }
         classVideoUrl.setAttribute('href', `${this.videoLink}`);
         classVideoInfo.setAttribute('title', `Class ${this.number} Video`);
         classVideoInfo.setAttribute('alt', `Class ${this.number} Video`);
@@ -83,6 +86,9 @@ class NewClassEntry {
     }
 
     changeSlidesLink() {
+        if (!this.slides) {
+            classSlides.style.display = 'none';
+        }
         classSlidesUrl.setAttribute('href', `${this.slides}`);
         return classNumberText.textContent = this.number;
     }
@@ -110,6 +116,7 @@ class NewClassEntry {
         this.changeSlidesLink();
         this.changeMotivationLink();
         this.changeCheckinLink();
+        createNewEntryInDom();
     };
 }
 
@@ -131,6 +138,10 @@ CREATING EACH CLASS ENTRY
 
 // `https://www.poetryfoundation.org/poems/51642/invictus`
 
+// Template for creating thumbnails:
+// `http://img.youtube.com/vi/TEXT-HERE/hqdefault.jpg`
+// Reformat this eventually
+
 const class01 = new NewClassEntry(
     `01`,
     `Jan 11, 2022`,
@@ -140,7 +151,8 @@ const class01 = new NewClassEntry(
     null,
     `https://slides.com/leonnoel/100devs2-html-the-basics`,
     `https://www.poetryfoundation.org/poems/51642/invictus`,
-    `https://twitter.com/leonnoel/status/1481030723347746816`);
+    `https://twitter.com/leonnoel/status/1481030723347746816`,
+);
 
 // createNewEntryInDom();
 class01.runAllCreateEntryFunctions();
@@ -154,8 +166,28 @@ const class02 = new NewClassEntry(
     null,
     `https://slides.com/leonnoel/100devs2-html-the-basics`,
     null,
-    `https://twitter.com/leonnoel/status/1481030723347746816`);
+    `https://twitter.com/leonnoel/status/1481030723347746816`,
+);
 
-
-createNewEntryInDom(02);    
 class02.runAllCreateEntryFunctions();
+
+const class03 = new NewClassEntry(
+    `03`,
+    `Aug 30`,
+);
+
+class03.runAllCreateEntryFunctions();
+
+const class04 = new NewClassEntry(
+    `04`,
+    `Dec 1`,
+    `https://www.youtube.com/watch?v=CG2UKDor9SY`,
+    `http://img.youtube.com/vi/CG2UKDor9SY/hqdefault.jpg`,
+    `https://cdn.discordapp.com/attachments/738891289071714388/933851316646719569/class04-materials.zip`,
+    `https://cdn.discordapp.com/attachments/738891289071714388/933917040769638420/class04-solutions.zip`,
+    `https://slides.com/leonnoel/100devs2-css-the-basics/`,
+    `https://youtu.be/6vuetQSwFW8`,
+    `https://twitter.com/leonnoel/status/1484292275064631297`,
+)
+
+class04.runAllCreateEntryFunctions();
