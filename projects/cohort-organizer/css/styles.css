@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgba(207, 207, 207, 0.749);
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-container h1, h2 {
+    text-align: center;
+}
+
+.class-container {
+    margin: 4rem;
+    width: 50%;
+}
+
+details > summary {
+    user-select: none;
+}
+
+details[open] .class-ul-text {
+    color: forestgreen;
+}
+
+.class-details {
+    font-size: 2rem;
+}
+
+.class-ul-text {
+    list-style: square;
+}
