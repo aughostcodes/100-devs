@@ -39,7 +39,7 @@ function createNewEntryInDom() {
 
 function resetTextContent() {
     console.log(classUlText.children);
-    console.log(typeof(classUlText));
+    console.log(typeof (classUlText));
     console.log(classUlText.childElementCount);
     // classUlText.textContent.style.display = 'block';
     if (classUlText.children.textContent) {
@@ -77,9 +77,10 @@ class NewClassEntry {
     }
 
     changeVideoLink() {
-        // if (!this.videoLink) {
-        //     classVideo.textContent = `No recorded video for this class`;
-        // }
+        if (!this.videoLink) {
+            classVideo.textContent = `No recorded video for this class`;
+            console.log(this.videoLink);
+        }
         classVideoUrl.setAttribute('href', `${this.videoLink}`);
         classVideoInfo.setAttribute('title', `Class ${this.number} Video`);
         classVideoInfo.setAttribute('alt', `Class ${this.number} Video`);
@@ -170,7 +171,6 @@ const class01 = new NewClassEntry(
     `https://twitter.com/leonnoel/status/1481030723347746816`,
 );
 
-// createNewEntryInDom();
 class01.runAllCreateEntryFunctions();
 
 const class02 = new NewClassEntry(
