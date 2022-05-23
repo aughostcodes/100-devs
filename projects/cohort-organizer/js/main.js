@@ -38,11 +38,12 @@ function createNewEntryInDom() {
 }
 
 function resetTextContent() {
+    console.log(classUlText.children);
     console.log(typeof(classUlText));
     // classUlText.textContent.style.display = 'block';
-    // classUlText.array.forEach(element => {
-        
-    // });
+    let ulTextArrary = classUlText.forEach(element => {
+        console.log(element);
+    });
 }
 
 // newDetailEntry.classList.add('class-details');
@@ -167,19 +168,19 @@ const class01 = new NewClassEntry(
 // createNewEntryInDom();
 class01.runAllCreateEntryFunctions();
 
-const class02 = new NewClassEntry(
-    `02`,
-    `Jan 13, 2022`,
-    `https://www.youtube.com/watch?v=L--DQgd1JVM`,
-    `http://img.youtube.com/vi/sRv19gkZ4E0/hqdefault.jpg`,
-    null,
-    null,
-    `https://slides.com/leonnoel/100devs2-html-the-basics`,
-    null,
-    `https://twitter.com/leonnoel/status/1481030723347746816`,
-);
+// const class02 = new NewClassEntry(
+//     `02`,
+//     `Jan 13, 2022`,
+//     `https://www.youtube.com/watch?v=L--DQgd1JVM`,
+//     `http://img.youtube.com/vi/sRv19gkZ4E0/hqdefault.jpg`,
+//     null,
+//     null,
+//     `https://slides.com/leonnoel/100devs2-html-the-basics`,
+//     null,
+//     `https://twitter.com/leonnoel/status/1481030723347746816`,
+// );
 
-class02.runAllCreateEntryFunctions();
+// class02.runAllCreateEntryFunctions();
 
 // const class03 = new NewClassEntry(
 //     `03`,
@@ -188,16 +189,16 @@ class02.runAllCreateEntryFunctions();
 
 // class03.runAllCreateEntryFunctions();
 
-const class04 = new NewClassEntry(
-    `04`,
-    `Dec 1`,
-    `https://www.youtube.com/watch?v=CG2UKDor9SY`,
-    `http://img.youtube.com/vi/CG2UKDor9SY/hqdefault.jpg`,
-    `https://cdn.discordapp.com/attachments/738891289071714388/933851316646719569/class04-materials.zip`,
-    `https://cdn.discordapp.com/attachments/738891289071714388/933917040769638420/class04-solutions.zip`,
-    `https://slides.com/leonnoel/100devs2-css-the-basics/`,
-    `https://youtu.be/6vuetQSwFW8`,
-    `https://twitter.com/leonnoel/status/1484292275064631297`,
-)
+// const class04 = new NewClassEntry(
+//     `04`,
+//     `Dec 1`,
+//     `https://www.youtube.com/watch?v=CG2UKDor9SY`,
+//     `http://img.youtube.com/vi/CG2UKDor9SY/hqdefault.jpg`,
+//     `https://cdn.discordapp.com/attachments/738891289071714388/933851316646719569/class04-materials.zip`,
+//     `https://cdn.discordapp.com/attachments/738891289071714388/933917040769638420/class04-solutions.zip`,
+//     `https://slides.com/leonnoel/100devs2-css-the-basics/`,
+//     `https://youtu.be/6vuetQSwFW8`,
+//     `https://twitter.com/leonnoel/status/1484292275064631297`,
+// )
 
-class04.runAllCreateEntryFunctions();
+// class04.runAllCreateEntryFunctions();
