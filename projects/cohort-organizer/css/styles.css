@@ -20,9 +20,9 @@
 }
 
 /* Why do I need to do this, though? Revisit this */
-/* details:first-of-type {
+details:first-of-type {
     display: none;
-} */
+}
 
 details > summary {
     user-select: none;
