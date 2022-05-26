@@ -9,19 +9,19 @@ let classContainer = document.querySelector('.class-container');
 let classNumberText = document.querySelector('.class-number');
 let classDateText = document.querySelector('.class-date');
 let classVideo = document.querySelector('.class-video');
-let classVideoUrl = document.querySelector('#class-video-url');
+let classVideoUrl = document.querySelector('.class-video-url');
 let classVideoInfo = document.querySelector('.class-video-info');
 let classUlText = document.querySelector('.class-ul-text');
 let classMaterials = document.querySelector('.class-materials');
-let classMaterialsUrl = document.querySelector('#class-materials-url');
+let classMaterialsUrl = document.querySelector('.class-materials-url');
 let classSolutions = document.querySelector('.class-solutions');
-let classSolutionsUrl = document.querySelector('#class-solutions-url');
+let classSolutionsUrl = document.querySelector('.class-solutions-url');
 let classSlides = document.querySelector('.class-slides');
-let classSlidesUrl = document.querySelector('#class-slides-url');
+let classSlidesUrl = document.querySelector('.class-slides-url');
 let classMotivation = document.querySelector('.class-motivation');
-let classMotivationUrl = document.querySelector('#class-motivation-url');
+let classMotivationUrl = document.querySelector('.class-motivation-url');
 let classCheckin = document.querySelector('.class-checkin');
-let classCheckinUrl = document.querySelector('#class-checkin-url');
+let classCheckinUrl = document.querySelector('.class-checkin-url');
 
 
 /* =======================
@@ -78,8 +78,8 @@ class NewClassEntry {
 
     changeVideoLink() {
         if (!this.videoLink) {
-            classVideo.textContent = `No recorded video for this class`;
             console.log(this.videoLink);
+            classVideo.textContent = `No recorded video for this class`;
         }
         classVideoUrl.setAttribute('href', `${this.videoLink}`);
         classVideoInfo.setAttribute('title', `Class ${this.number} Video`);
