@@ -665,8 +665,11 @@ function declareWinner(fighter1, fighter2, firstAttacker) {
                 fighter1.health - fighter2.damagePerAttack;
             }
         }
+        console.log(fighter1);
+        console.log(fighter2);
     }
     while (fighter1.health > 0 || fighter2.health > 0) {
+    
     }
     // return name of winner
 }
