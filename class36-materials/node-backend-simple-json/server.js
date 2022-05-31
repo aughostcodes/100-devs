@@ -2,7 +2,6 @@ const http = require('http');
 const fs = require('fs')
 const url = require('url');
 const querystring = require('querystring');
-// const urlSearchParams = require('urlsearchparams');
 const figlet = require('figlet')
 
 const server = http.createServer((req, res) => {
@@ -44,9 +43,9 @@ const server = http.createServer((req, res) => {
       else if(params['student'] != 'leon'){
         res.writeHead(200, {'Content-Type': 'application/json'});
         const objToJson = {
-          name: "unknown",
-          status: "unknown",
-          currentOccupation: "unknown"
+          name: "not leon",
+          status: "exists",
+          currentOccupation: "janitor"
         }
         res.end(JSON.stringify(objToJson));
       }//student != leon
@@ -64,7 +63,7 @@ const server = http.createServer((req, res) => {
       res.end();
     });
   }else{
-    figlet('404!!', function(err, data) {
+    figlet('Page Not Found', function(err, data) {
       if (err) {
           console.log('Something went wrong...');
           console.dir(err);
