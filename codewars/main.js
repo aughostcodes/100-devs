@@ -657,5 +657,16 @@ function Fighter(name, health, damagePerAttack) {
 }
 
 function declareWinner(fighter1, fighter2, firstAttacker) {
-    
+    do {
+        if (firstAttacker === fighter1.name) {
+            fighter2.health - fighter1.damagePerAttack;
+        } else {
+            if (firstAttacker === fighter2.name) {
+                fighter1.health - fighter2.damagePerAttack;
+            }
+        }
+    }
+    while (fighter1.health > 0 || fighter2.health > 0) {
+    }
+    // return name of winner
 }
