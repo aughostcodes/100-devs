@@ -649,27 +649,29 @@ Lew attacks Harry; Harry now has 1 health.
 Harry attacks Lew; Lew now has 2 health.
 Lew attacks Harry: Harry now has -1 health and is dead. Lew wins.
 */
+
 function Fighter(name, health, damagePerAttack) {
-        this.name = name;
-        this.health = health;
-        this.damagePerAttack = damagePerAttack;
-        this.toString = function() { return this.name; }
+    this.name = name;
+    this.health = health;
+    this.damagePerAttack = damagePerAttack;
+    this.toString = function () {
+        return this.name;
+    }
 }
 
 function declareWinner(fighter1, fighter2, firstAttacker) {
-    do {
-        if (firstAttacker === fighter1.name) {
-            fighter2.health - fighter1.damagePerAttack;
-        } else {
-            if (firstAttacker === fighter2.name) {
-                fighter1.health - fighter2.damagePerAttack;
-            }
+    if (firstAttacker === fighter1.name) {
+        fighter2.health - fighter1.damagePerAttack;
+    } else {
+        if (firstAttacker === fighter2.name) {
+            fighter1.health - fighter2.damagePerAttack;
         }
-        console.log(fighter1);
-        console.log(fighter2);
     }
+    console.log(fighter1);
+    console.log(fighter2);
+
     while (fighter1.health > 0 || fighter2.health > 0) {
-    
+
     }
     // return name of winner
 }
