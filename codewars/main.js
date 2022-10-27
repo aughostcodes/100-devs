@@ -675,3 +675,38 @@ function declareWinner(fighter1, fighter2, firstAttacker) {
     }
     // return name of winner
 }
+// RETURN TO THIS
+
+/* 7 kyu - 'x' marks the spot.
+Given a two dimensional array, return the co-ordinates of x.
+
+If x is not inside the array, or if x appears multiple times, return [].
+
+The co-ordinates should be zero indexed in row-major order.
+You should assume you will always get an array as input. The array will only contain 'x's and 'o's.
+
+Input: [
+    ['o', 'o', 'o', 'o', 'o', 'o', 'o', 'o'],
+    ['o', 'o', 'o', 'o', 'o', 'o', 'o', 'o'],
+    ['o', 'o', 'o', 'o', 'o', 'o', 'o', 'o'],
+    ['o', 'o', 'o', 'o', 'o', 'o', 'o', 'o'],
+    ['o', 'o', 'o', 'o', 'o', 'o', 'x', 'o'],
+    ['o', 'o', 'o', 'o', 'o', 'o', 'o', 'o']
+]
+Return [4,6] for the example above => [4, 6]
+*/
+
+const xMarksTheSpot = (input) => {
+    return [];
+}
+
+function xMarks(input) {
+    if (!input) {
+        return [];
+    } else if (input.indexOf('x') ) {
+        console.log('an x');
+    }
+    // if (input) {
+    //     input.forEach(console.log(input));
+    // }
+}
