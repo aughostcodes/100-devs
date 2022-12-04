@@ -12,7 +12,13 @@
 <body>
     <main>
         <h1>My Pokemans, let me show you them.</h1>
-        <button class="go-button" type="button">Show me them</button>
+
+        <form id="search-bar" role="search">
+            <input type="search" id="query" name="search-bar-input" placeholder="Search by name" aria-label="Search for a Pokemon">
+            <button type="button" class="search-button">Search</button>
+        </form>
+
+        <button class="go-button" type="button">Random Pokemon</button>
         <h2 class="poke-name"></h2>
         <div class="type-container">
             <p class="poke-type1"></p>
