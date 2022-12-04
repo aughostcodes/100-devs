@@ -706,7 +706,7 @@ function xMarks(input) {
     } else if (input.indexOf('x') ) {
         console.log('an x');
     }
-    // if (input) {
+    // if (input) {f
     //     input.forEach(console.log(input));
     // }
 }
