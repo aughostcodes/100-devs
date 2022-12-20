@@ -4,7 +4,7 @@
 
 // Variables
 const searchBar = document.querySelector('#query');
-const goButton = document.querySelector('.go-button');
+const randomButton = document.querySelector('.random-button');
 const searchButton = document.querySelector('.search-button');
 const pokeName = document.querySelector('.poke-name');
 let pokeType1 = document.querySelector('.poke-type1');
@@ -20,23 +20,23 @@ const grabTextFromSearch = () => {
     let query = searchBar.value;
     let regex = /'/g;
     let result = query.replace(regex, '');
-    return result;
+    return result.toLowerCase();
 }
 
-let fetchTheMon = () => fetch(`https://pokeapi.co/api/v2/pokemon/${createRandom()}`)
-.then(res => res.json())
-.then(data => {
-    pokeName.textContent = data.name.toUpperCase();
-    frontSprite.src = data.sprites.front_default;
-    pokeType1.textContent = data.types[0].type.name;
-    pokeType2.textContent = data.types[1].type.name;
+// let fetchTheMon = () => fetch(`https://pokeapi.co/api/v2/pokemon/${createRandom()}`)
+// .then(res => res.json())
+// .then(data => {
+//     pokeName.textContent = data.name.toUpperCase();
+//     frontSprite.src = data.sprites.front_default;
+//     pokeType1.textContent = data.types[0].type.name;
+//     pokeType2.textContent = data.types[1].type.name;
 
-    console.log(data.types);
-    console.log(data);
-})
-.catch(err => {
-    console.log(`error ${err}`);
-});
+//     console.log(data.types);
+//     console.log(data);
+// })
+// .catch(err => {
+//     console.log(`error ${err}`);
+// });
 
 let searchForPoke = () => fetch(`https://pokeapi.co/api/v2/pokemon/${grabTextFromSearch()}`)
 .then(res => res.json())
@@ -53,5 +53,5 @@ let searchForPoke = () => fetch(`https://pokeapi.co/api/v2/pokemon/${grabTextFro
 });
 
 
-goButton.addEventListener('click', fetchTheMon);
+// randomButton.addEventListener('click', fetchTheMon);
 searchButton.addEventListener('click', searchForPoke);
